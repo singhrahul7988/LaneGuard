@@ -412,46 +412,6 @@ export function StationAnalyticsScreen() {
               </div>
             </section>
 
-            <section
-              data-region="trendChart"
-              style={{
-                background: "var(--lg-surface-container)",
-                border: "1px solid var(--lg-outline-variant)",
-                padding: 16,
-                display: "grid",
-                gap: 14,
-                alignContent: "start",
-                height: "100%",
-              }}
-            >
-              <div style={{ fontSize: 18, fontWeight: 700 }}>High-Risk Corridor Density</div>
-              <div style={{ display: "grid", gap: 14, alignContent: "start" }}>
-                {trendRows.map((row) => {
-                  const highRiskDensity = Math.round((row.forecastCorridors / Math.max(1, row.hotspot_count)) * 100);
-                  return (
-                    <div key={row.station} style={{ display: "grid", gap: 6 }}>
-                      <div style={{ display: "flex", justifyContent: "space-between", gap: 12, alignItems: "baseline" }}>
-                        <div className="lg-mono" style={{ fontSize: 12, color: row.station === focusedStation?.station || row.station === mapStation?.station ? "var(--lg-text)" : "var(--lg-text-muted)" }}>
-                          {row.station}
-                        </div>
-                        <div className="lg-mono" style={{ fontSize: 12, color: "var(--lg-primary)", whiteSpace: "nowrap" }}>
-                          {highRiskDensity} forecast corridors / 100 hotspots
-                        </div>
-                      </div>
-                      <div style={{ width: "100%", height: 10, background: "var(--lg-surface-highest)" }}>
-                        <div
-                          style={{
-                            width: `${Math.min(100, highRiskDensity)}%`,
-                            height: "100%",
-                            background: highRiskDensity > 45 ? "#ffb4aa" : highRiskDensity > 25 ? "var(--lg-secondary)" : "var(--lg-primary)",
-                          }}
-                        />
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </section>
           </div>
 
           <div style={{ display: "grid", gap: 16, alignContent: "start", minWidth: 0 }}>
@@ -468,6 +428,60 @@ export function StationAnalyticsScreen() {
               <div style={{ fontSize: 18, fontWeight: 700 }}>Forecast Focus</div>
               <div className="lg-subtitle">
                 Stations are ranked by next-shift predicted load, average forecast risk, and confidence share. Use the charts and map to compare where the model expects the strongest parking-pressure escalation.
+              </div>
+            </section>
+
+            <section
+              data-region="trendChart"
+              style={{
+                background: "var(--lg-surface-container)",
+                border: "1px solid var(--lg-outline-variant)",
+                padding: 16,
+                display: "grid",
+                gap: 14,
+                alignContent: "start",
+              }}
+            >
+              <div style={{ fontSize: 18, fontWeight: 700 }}>High-Risk Corridor Density</div>
+              <div style={{ display: "grid", gap: 14, alignContent: "start" }}>
+                {trendRows.map((row) => {
+                  const highRiskDensity = Math.round((row.forecastCorridors / Math.max(1, row.hotspot_count)) * 100);
+                  return (
+                    <div key={row.station} style={{ display: "grid", gap: 6 }}>
+                      <div style={{ display: "flex", justifyContent: "space-between", gap: 12, alignItems: "baseline" }}>
+                        <div
+                          className="lg-mono"
+                          style={{
+                            fontSize: 12,
+                            color:
+                              row.station === focusedStation?.station || row.station === mapStation?.station
+                                ? "var(--lg-text)"
+                                : "var(--lg-text-muted)",
+                          }}
+                        >
+                          {row.station}
+                        </div>
+                        <div className="lg-mono" style={{ fontSize: 12, color: "var(--lg-primary)", whiteSpace: "nowrap" }}>
+                          {highRiskDensity} forecast corridors / 100 hotspots
+                        </div>
+                      </div>
+                      <div style={{ width: "100%", height: 10, background: "var(--lg-surface-highest)" }}>
+                        <div
+                          style={{
+                            width: `${Math.min(100, highRiskDensity)}%`,
+                            height: "100%",
+                            background:
+                              highRiskDensity > 45
+                                ? "#ffb4aa"
+                                : highRiskDensity > 25
+                                  ? "var(--lg-secondary)"
+                                  : "var(--lg-primary)",
+                          }}
+                        />
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </section>
           </div>

@@ -22,6 +22,8 @@ const severityOptions: Array<{ value: SeverityFilter; label: string }> = [
   { value: "moderate", label: "Moderate" },
 ];
 const targetCountOptions = [3, 4, 5, 6, 7, 8, 9, 10] as const;
+const forecastDayOptions = [1, 2, 3, 4] as const;
+const forecastDayLabels = buildForecastDayLabels();
 
 export function CommandCenterScreen() {
   const brief = useProcessedJson<BriefSummary>("/data/processed/brief_summary.json");
@@ -33,7 +35,8 @@ export function CommandCenterScreen() {
 
   const hotspots = hotspotsState.data ?? brief.data?.top_hotspots ?? [];
   const records = recordsState.data ?? [];
-  const forecastRows = modelForecastState.data ?? forecastState.data ?? [];
+  const forecastDay = readForecastDay(searchParams);
+  const forecastRows = applyForecastDayHorizon(modelForecastState.data ?? forecastState.data ?? [], forecastDay);
   const analytics = records.length ? buildRecordAnalytics(records) : null;
   const filters = readFilters(searchParams);
   const filteredHotspots = filterHotspots(hotspots, analytics, filters);
@@ -51,7 +54,7 @@ export function CommandCenterScreen() {
   const visibleForecastRows = buildVisibleForecastRows(filteredHotspots, forecastByCluster, targetCount);
   const forecastLead = visibleForecastRows[0] ?? null;
   const stationScopeLabel = filters.station === "all" ? "All Stations" : filters.station;
-  const forecastWindowLabel = buildForecastWindowLabel(filters.timeBand);
+  const forecastWindowLabel = buildForecastWindowLabel(filters.timeBand, forecastDay);
   const selectedHotspot =
     filteredHotspots.find((hotspot) => hotspot.cluster_id === selectedClusterId) ??
     (forecastLead ? filteredHotspots.find((hotspot) => hotspot.cluster_id === forecastLead.cluster_id) : null) ??
@@ -85,6 +88,12 @@ export function CommandCenterScreen() {
   function updateTargetCount(value: number) {
     const next = new URLSearchParams(searchParams);
     setTargetCountParam(next, value);
+    setSearchParams(next, { replace: true });
+  }
+
+  function updateForecastDay(value: number) {
+    const next = new URLSearchParams(searchParams);
+    setForecastDayParam(next, value);
     setSearchParams(next, { replace: true });
   }
 
@@ -174,7 +183,7 @@ export function CommandCenterScreen() {
               borderBottom: "1px solid var(--lg-outline-variant)",
             }}
           >
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(4, minmax(0, 1fr))", gap: 12 }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(5, minmax(0, 1fr))", gap: 12 }}>
               <FilterSelect
                 label="Station"
                 value={filters.station}
@@ -188,6 +197,13 @@ export function CommandCenterScreen() {
                 options={timeBandOptions.map((item) => item.value)}
                 labels={Object.fromEntries(timeBandOptions.map((item) => [item.value, item.label]))}
                 onChange={(value) => updateFilters({ timeBand: value as DashboardFilters["timeBand"], cluster: null })}
+              />
+              <FilterSelect
+                label="Forecast Day"
+                value={String(forecastDay)}
+                options={forecastDayOptions.map(String)}
+                labels={forecastDayLabels}
+                onChange={(value) => updateForecastDay(Number(value))}
               />
               <FilterSelect
                 label="Violation"
@@ -606,33 +622,12 @@ function MiniMetric(props: { label: string; value: string }) {
   );
 }
 
-function buildForecastWindowLabel(timeBand: DashboardFilters["timeBand"]) {
-  const now = new Date();
-  const currentHour = Number(
-    new Intl.DateTimeFormat("en-IN", {
-      timeZone: "Asia/Kolkata",
-      hour: "2-digit",
-      hour12: false,
-    }).format(now),
-  );
-
-  const targetDate = new Date(now);
-
-  if (timeBand === "morning" && currentHour >= 11) {
-    targetDate.setDate(targetDate.getDate() + 1);
-  } else if (timeBand === "midday" && currentHour >= 16) {
-    targetDate.setDate(targetDate.getDate() + 1);
-  } else if (timeBand === "evening" && currentHour >= 21) {
-    targetDate.setDate(targetDate.getDate() + 1);
-  } else if (timeBand === "overnight" && currentHour >= 6 && currentHour < 21) {
-    targetDate.setDate(targetDate.getDate() + 1);
-  }
-
+function buildForecastWindowLabel(timeBand: DashboardFilters["timeBand"], forecastDay: number) {
+  const targetDate = buildForecastTargetDate(forecastDay);
   const dateLabel = new Intl.DateTimeFormat("en-IN", {
     timeZone: "Asia/Kolkata",
     day: "2-digit",
     month: "short",
-    year: "numeric",
   }).format(targetDate);
 
   return `${labelForForecastWindow(timeBand)} | ${dateLabel}`;
@@ -644,22 +639,56 @@ function labelForForecastWindow(timeBand: DashboardFilters["timeBand"]) {
   }
 
   if (timeBand === "morning") {
-    return "Morning 06:00-11:00";
+    return "Morning";
   }
 
   if (timeBand === "midday") {
-    return "Midday 11:00-16:00";
+    return "Midday";
   }
 
   if (timeBand === "evening") {
-    return "Evening 16:00-21:00";
+    return "Evening";
   }
 
   if (timeBand === "overnight") {
-    return "Overnight 21:00-06:00";
+    return "Overnight";
   }
 
   return "All Day";
+}
+
+function buildForecastDayLabels() {
+  return Object.fromEntries(
+    forecastDayOptions.map((dayAhead) => [
+      String(dayAhead),
+      new Intl.DateTimeFormat("en-IN", {
+        timeZone: "Asia/Kolkata",
+        day: "2-digit",
+        month: "short",
+      }).format(buildForecastTargetDate(dayAhead)),
+    ]),
+  );
+}
+
+function buildForecastTargetDate(forecastDay: number) {
+  const currentIstDate = getCurrentIstDate();
+  currentIstDate.setUTCDate(currentIstDate.getUTCDate() + Math.max(1, forecastDay));
+  return currentIstDate;
+}
+
+function getCurrentIstDate() {
+  const parts = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Kolkata",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).formatToParts(new Date());
+
+  const year = Number(parts.find((part) => part.type === "year")?.value ?? "1970");
+  const month = Number(parts.find((part) => part.type === "month")?.value ?? "01");
+  const day = Number(parts.find((part) => part.type === "day")?.value ?? "01");
+
+  return new Date(Date.UTC(year, month - 1, day, 12, 0, 0));
 }
 
 function formatConfidenceLabel(confidence: ForecastHotspot["confidence"]) {
@@ -734,6 +763,50 @@ function buildVisibleForecastRows(
     })
     .slice(0, targetCount)
     .map((entry) => entry.forecast);
+}
+
+function applyForecastDayHorizon(rows: ForecastHotspot[], forecastDay: number) {
+  const extraDays = Math.max(0, forecastDay - 1);
+  if (!extraDays) {
+    return rows;
+  }
+
+  return rows.map((row) => {
+    const riskPenalty = extraDays * 6;
+    const countDecay = Math.max(0.72, 1 - extraDays * 0.08);
+
+    return {
+      ...row,
+      predicted_risk_score: Math.max(8, Math.round(row.predicted_risk_score - riskPenalty)),
+      predicted_next_shift_records:
+        row.predicted_next_shift_records == null
+          ? row.predicted_next_shift_records
+          : Math.max(0, Math.round(row.predicted_next_shift_records * countDecay)),
+      confidence: degradeForecastConfidence(row.confidence, extraDays),
+    };
+  });
+}
+
+function degradeForecastConfidence(
+  confidence: ForecastHotspot["confidence"],
+  extraDays: number,
+): ForecastHotspot["confidence"] {
+  if (extraDays <= 0) {
+    return confidence;
+  }
+
+  if (extraDays === 1) {
+    return confidence === "low" ? "low" : confidence;
+  }
+
+  if (extraDays === 2) {
+    if (confidence === "high") {
+      return "medium";
+    }
+    return "low";
+  }
+
+  return "low";
 }
 
 function getInterventionTone(row: ForecastHotspot, hotspot: HotspotRecord | null) {
@@ -905,6 +978,11 @@ function readTargetCount(searchParams: URLSearchParams) {
   return targetCountOptions.includes(raw as (typeof targetCountOptions)[number]) ? raw : 5;
 }
 
+function readForecastDay(searchParams: URLSearchParams) {
+  const raw = Number(searchParams.get("dayAhead") ?? 1);
+  return forecastDayOptions.includes(raw as (typeof forecastDayOptions)[number]) ? raw : 1;
+}
+
 function setFilterParam(searchParams: URLSearchParams, key: string, value: string, defaultValue: string) {
   if (!value || value === defaultValue) {
     searchParams.delete(key);
@@ -920,6 +998,15 @@ function setTargetCountParam(searchParams: URLSearchParams, value: number) {
   }
 
   searchParams.set("targets", String(value));
+}
+
+function setForecastDayParam(searchParams: URLSearchParams, value: number) {
+  if (value === 1) {
+    searchParams.delete("dayAhead");
+    return;
+  }
+
+  searchParams.set("dayAhead", String(value));
 }
 
 function uniqueStations(hotspots: HotspotRecord[]) {

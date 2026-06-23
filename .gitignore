@@ -25,3 +25,9 @@ public/data/processed/model_scoring_preview.json
 *.zip
 *.7z
 *.rar
+
+# Development-only process artifacts
+docs/
+stitch_screens/
+plans/
+.agents/
