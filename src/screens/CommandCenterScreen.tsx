@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { AppHeader, headerUtilityRoutes } from "../components/AppHeader";
 import { GeoMap } from "../components/map/GeoMap";
@@ -22,7 +23,7 @@ const severityOptions: Array<{ value: SeverityFilter; label: string }> = [
   { value: "moderate", label: "Moderate" },
 ];
 const targetCountOptions = [3, 4, 5, 6, 7, 8, 9, 10] as const;
-const forecastDayOptions = [1, 2, 3, 4] as const;
+const forecastDayOptions = Array.from({ length: 15 }, (_, index) => index + 1);
 const forecastDayLabels = buildForecastDayLabels();
 
 export function CommandCenterScreen() {
@@ -198,7 +199,7 @@ export function CommandCenterScreen() {
                 labels={Object.fromEntries(timeBandOptions.map((item) => [item.value, item.label]))}
                 onChange={(value) => updateFilters({ timeBand: value as DashboardFilters["timeBand"], cluster: null })}
               />
-              <FilterSelect
+              <ForecastDaySelect
                 label="Forecast Day"
                 value={String(forecastDay)}
                 options={forecastDayOptions.map(String)}
@@ -574,6 +575,129 @@ function FilterSelect(props: {
   );
 }
 
+function ForecastDaySelect(props: {
+  label: string;
+  value: string;
+  options: string[];
+  labels?: Record<string, string>;
+  onChange: (value: string) => void;
+}) {
+  const [open, setOpen] = useState(false);
+  const hostRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (!open) {
+      return;
+    }
+
+    function handlePointerDown(event: PointerEvent) {
+      if (!hostRef.current?.contains(event.target as Node)) {
+        setOpen(false);
+      }
+    }
+
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        setOpen(false);
+      }
+    }
+
+    document.addEventListener("pointerdown", handlePointerDown);
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("pointerdown", handlePointerDown);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [open]);
+
+  const selectedLabel = props.labels?.[props.value] ?? props.value;
+
+  return (
+    <div ref={hostRef} style={{ display: "grid", gap: 6, position: "relative" }}>
+      <span className="lg-kicker">{props.label}</span>
+      <button
+        type="button"
+        aria-haspopup="listbox"
+        aria-expanded={open}
+        onClick={() => setOpen((current) => !current)}
+        style={{
+          border: `1px solid ${open ? "var(--lg-primary)" : "var(--lg-outline-variant)"}`,
+          background: "var(--lg-surface-container)",
+          color: "var(--lg-text)",
+          padding: "10px 12px",
+          minHeight: 42,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          gap: 12,
+          textAlign: "left",
+          boxShadow: open ? "0 0 0 1px rgba(46,91,255,0.16)" : "none",
+        }}
+      >
+        <span style={{ minWidth: 0 }}>{selectedLabel}</span>
+        <Icon name="arrow_drop_down" size={16} color="var(--lg-text-muted)" />
+      </button>
+
+      {open ? (
+        <div
+          role="listbox"
+          aria-label={props.label}
+          style={{
+            position: "absolute",
+            top: "calc(100% + 4px)",
+            left: 0,
+            right: 0,
+            zIndex: 20,
+            maxHeight: 220,
+            overflowY: "auto",
+            overscrollBehavior: "contain",
+            scrollbarGutter: "stable",
+            border: "1px solid var(--lg-outline-variant)",
+            background: "var(--lg-surface)",
+            boxShadow: "0 14px 30px rgba(0,0,0,0.42)",
+          }}
+        >
+          {props.options.map((option) => {
+            const active = option === props.value;
+
+            return (
+              <button
+                key={option}
+                type="button"
+                role="option"
+                aria-selected={active}
+                onClick={() => {
+                  props.onChange(option);
+                  setOpen(false);
+                }}
+                style={{
+                  width: "100%",
+                  minHeight: 44,
+                  padding: "10px 12px",
+                  border: "none",
+                  borderBottom: "1px solid rgba(255,255,255,0.04)",
+                  background: active ? "rgba(46,91,255,0.18)" : "transparent",
+                  color: active ? "#dfe5ff" : "var(--lg-text)",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  gap: 10,
+                  textAlign: "left",
+                  cursor: "pointer",
+                }}
+              >
+                <span>{props.labels?.[option] ?? option}</span>
+                {active ? <Icon name="check_circle" size={14} color="var(--lg-primary)" /> : null}
+              </button>
+            );
+          })}
+        </div>
+      ) : null}
+    </div>
+  );
+}
+
 function MetricCard(props: { label: string; value: string; note: string; accent: string; compact?: boolean }) {
   return (
     <div
@@ -624,11 +748,7 @@ function MiniMetric(props: { label: string; value: string }) {
 
 function buildForecastWindowLabel(timeBand: DashboardFilters["timeBand"], forecastDay: number) {
   const targetDate = buildForecastTargetDate(forecastDay);
-  const dateLabel = new Intl.DateTimeFormat("en-IN", {
-    timeZone: "Asia/Kolkata",
-    day: "2-digit",
-    month: "short",
-  }).format(targetDate);
+  const dateLabel = formatForecastDate(targetDate);
 
   return `${labelForForecastWindow(timeBand)} | ${dateLabel}`;
 }
@@ -661,11 +781,7 @@ function buildForecastDayLabels() {
   return Object.fromEntries(
     forecastDayOptions.map((dayAhead) => [
       String(dayAhead),
-      new Intl.DateTimeFormat("en-IN", {
-        timeZone: "Asia/Kolkata",
-        day: "2-digit",
-        month: "short",
-      }).format(buildForecastTargetDate(dayAhead)),
+      formatForecastDate(buildForecastTargetDate(dayAhead)),
     ]),
   );
 }
@@ -689,6 +805,15 @@ function getCurrentIstDate() {
   const day = Number(parts.find((part) => part.type === "day")?.value ?? "01");
 
   return new Date(Date.UTC(year, month - 1, day, 12, 0, 0));
+}
+
+function formatForecastDate(value: Date) {
+  return new Intl.DateTimeFormat("en-IN", {
+    timeZone: "Asia/Kolkata",
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  }).format(value);
 }
 
 function formatConfidenceLabel(confidence: ForecastHotspot["confidence"]) {
@@ -980,7 +1105,7 @@ function readTargetCount(searchParams: URLSearchParams) {
 
 function readForecastDay(searchParams: URLSearchParams) {
   const raw = Number(searchParams.get("dayAhead") ?? 1);
-  return forecastDayOptions.includes(raw as (typeof forecastDayOptions)[number]) ? raw : 1;
+  return forecastDayOptions.includes(raw) ? raw : 1;
 }
 
 function setFilterParam(searchParams: URLSearchParams, key: string, value: string, defaultValue: string) {
