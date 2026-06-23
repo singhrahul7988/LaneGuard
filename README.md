@@ -1,5 +1,9 @@
 # LaneGuard
 
+<p align="center">
+  <img src="./assets/readme-preview.png" alt="LaneGuard application preview" width="920" />
+</p>
+
 LaneGuard is an AI-assisted parking-enforcement intelligence system for Bengaluru Traffic Police. It turns historical parking violation records into:
 
 - predicted next-shift hotspot risk
