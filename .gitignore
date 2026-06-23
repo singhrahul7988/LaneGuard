@@ -1,0 +1,27 @@
+node_modules/
+dist/
+.tmp/
+.tmp-*.log
+.tmp-vite.*
+.vscode/
+__pycache__/
+ml/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.tsbuildinfo
+
+# Raw or regenerated local data
+Dataset/
+data/processed/
+
+# Large ML intermediates not required by the frontend runtime
+public/data/processed/model_training_rows.csv
+public/data/processed/model_scoring_rows.csv
+public/data/processed/model_training_preview.json
+public/data/processed/model_scoring_preview.json
+
+# Local archives / exports
+*.zip
+*.7z
+*.rar

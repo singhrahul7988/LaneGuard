@@ -1,0 +1,152 @@
+<svg width="480" height="480" viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tileBg" x1="80" y1="70" x2="430" y2="460" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#071a33"/>
+      <stop offset="1" stop-color="#03101f"/>
+    </linearGradient>
+
+    <linearGradient id="blueGrad" x1="120" y1="95" x2="380" y2="360" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1282ff"/>
+      <stop offset="1" stop-color="#0067e8"/>
+    </linearGradient>
+
+    <linearGradient id="yellowGrad" x1="300" y1="220" x2="360" y2="360" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffc21a"/>
+      <stop offset="1" stop-color="#ffb000"/>
+    </linearGradient>
+
+    <linearGradient id="roadGrad" x1="205" y1="160" x2="245" y2="420" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#f1f3f7"/>
+    </linearGradient>
+
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <rect width="480" height="480" fill="#020813"/>
+
+  <rect
+    x="56"
+    y="69"
+    width="390"
+    height="390"
+    rx="64"
+    fill="url(#tileBg)"
+    stroke="#0b2341"
+    stroke-width="1.5"
+    filter="url(#softShadow)"
+  />
+
+  <path
+    d="M250 106
+       C217 133 174 151 122 160
+       L122 256
+       C122 286 133 316 154 344
+       L166 319
+       C157 299 153 279 153 255
+       L153 186
+       C191 178 222 165 250 145
+       Z"
+    fill="url(#blueGrad)"
+  />
+
+  <path
+    d="M250 106
+       C283 133 326 151 378 160
+       L378 256
+       C378 286 367 316 346 344
+       L334 319
+       C343 299 347 279 347 255
+       L347 186
+       C309 178 278 165 250 145
+       Z"
+    fill="url(#blueGrad)"
+  />
+
+  <path
+    d="M247 108 L247 151 L253 151 L253 108 Z"
+    fill="#051326"
+  />
+
+  <path
+    d="M317 231
+       C294 261 288 296 301 329
+       C307 344 316 359 330 373
+       L354 342
+       C336 319 327 296 328 270
+       C329 255 333 241 339 229
+       L339 229
+       C332 229 324 230 317 231 Z"
+    fill="url(#yellowGrad)"
+  />
+
+  <path
+    d="M252 169
+       C289 188 303 212 294 238
+       C287 259 269 281 260 310
+       C250 341 253 376 265 417
+       L313 392
+       C292 358 284 326 292 295
+       C301 260 325 230 310 203
+       C300 185 280 174 252 169 Z
+
+       M249 169
+       C218 186 191 212 177 244
+       C160 281 151 318 137 357
+       L218 417
+       C216 380 218 343 229 311
+       C240 277 262 252 275 229
+       C289 202 276 181 249 169 Z"
+    fill="url(#roadGrad)"
+  />
+
+  <path
+    d="M247 184
+       C267 200 275 217 269 237
+       C261 262 243 286 236 316
+       C229 347 231 380 239 413
+       L251 407
+       C244 374 244 344 250 318
+       C257 289 275 263 282 238
+       C289 214 276 195 247 184 Z"
+    fill="#061426"
+  />
+
+  <path
+    d="M274 200
+       C280 207 283 214 283 220
+       L273 218
+       C272 212 269 207 264 202
+       Z"
+    fill="#f7f9fc"
+  />
+
+  <path
+    d="M269 239
+       C266 250 260 260 254 271
+       L238 267
+       C245 256 251 246 255 236
+       Z"
+    fill="#f7f9fc"
+  />
+
+  <path
+    d="M246 296
+       C243 310 241 323 240 337
+       L221 336
+       C222 321 225 307 229 293
+       Z"
+    fill="#f7f9fc"
+  />
+
+  <path
+    d="M238 362
+       C238 378 240 392 244 408
+       L224 408
+       C221 392 219 376 219 361
+       Z"
+    fill="#f7f9fc"
+  />
+</svg>

@@ -1,0 +1,88 @@
+{
+  "model_name": "xgboost_hotspot_classifier_v2",
+  "baseline_name": "heuristic_baseline_v1",
+  "validation_rows": 6866,
+  "test_rows": 7796,
+  "validation_start_date": "2024-03-12",
+  "validation_end_date": "2024-03-25",
+  "test_start_date": "2024-03-26",
+  "test_end_date": "2024-04-08",
+  "chosen_threshold": 0.3,
+  "primary_metric_name": "average_precision",
+  "primary_metric_value": 0.6591,
+  "metrics": [
+    {
+      "key": "average_precision",
+      "label": "Average Precision",
+      "model_value": 0.6907,
+      "baseline_value": 0.3194,
+      "delta": 0.3713,
+      "better": "higher",
+      "winner": "model"
+    },
+    {
+      "key": "precision_at_risk_55",
+      "label": "Precision @ Risk 55",
+      "model_value": 0.8652,
+      "baseline_value": 0.3217,
+      "delta": 0.5435,
+      "better": "higher",
+      "winner": "model"
+    },
+    {
+      "key": "recall_at_risk_55",
+      "label": "Recall @ Risk 55",
+      "model_value": 0.383,
+      "baseline_value": 0.4278,
+      "delta": -0.0448,
+      "better": "higher",
+      "winner": "baseline"
+    },
+    {
+      "key": "precision_at_top_30",
+      "label": "Precision @ Top 30",
+      "model_value": 1.0,
+      "baseline_value": 0.6,
+      "delta": 0.4,
+      "better": "higher",
+      "winner": "model"
+    },
+    {
+      "key": "recall_at_top_30",
+      "label": "Recall @ Top 30",
+      "model_value": 0.0235,
+      "baseline_value": 0.0141,
+      "delta": 0.0094,
+      "better": "higher",
+      "winner": "model"
+    },
+    {
+      "key": "mae_next_shift_records",
+      "label": "Next-shift MAE",
+      "model_value": 0.7698,
+      "baseline_value": 2.834,
+      "delta": -2.0642,
+      "better": "lower",
+      "winner": "model"
+    },
+    {
+      "key": "log_loss",
+      "label": "Log Loss",
+      "model_value": 0.2843,
+      "baseline_value": 0.5638,
+      "delta": -0.2795,
+      "better": "lower",
+      "winner": "model"
+    },
+    {
+      "key": "brier_score",
+      "label": "Brier Score",
+      "model_value": 0.0841,
+      "baseline_value": 0.1879,
+      "delta": -0.1038,
+      "better": "lower",
+      "winner": "model"
+    }
+  ],
+  "summary_note": "xgboost_hotspot_classifier_v2 was selected after tuning and calibration on the validation window, then compared against the heuristic baseline on the untouched holdout test window."
+}

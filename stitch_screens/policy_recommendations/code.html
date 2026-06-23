@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LaneGuard - Policy Recommendations</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config injected from design system -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-container": "#6b4800",
+                    "surface-container-lowest": "#0c0e12",
+                    "outline-variant": "#434656",
+                    "surface": "#111317",
+                    "background": "#111317",
+                    "secondary-container": "#ffb211",
+                    "tertiary-container": "#d71a18",
+                    "surface-container-highest": "#333539",
+                    "on-secondary-fixed": "#281800",
+                    "secondary": "#ffd79b",
+                    "on-primary-fixed-variant": "#0035be",
+                    "secondary-fixed": "#ffdeae",
+                    "on-tertiary-fixed": "#410001",
+                    "on-error-container": "#ffdad6",
+                    "inverse-primary": "#124af0",
+                    "primary": "#b8c3ff",
+                    "surface-container-low": "#1a1c20",
+                    "surface-tint": "#b8c3ff",
+                    "on-tertiary": "#690003",
+                    "on-secondary-fixed-variant": "#604100",
+                    "surface-dim": "#111317",
+                    "error-container": "#93000a",
+                    "primary-fixed-dim": "#b8c3ff",
+                    "surface-bright": "#37393e",
+                    "surface-container": "#1e2024",
+                    "primary-container": "#2e5bff",
+                    "on-background": "#e2e2e8",
+                    "on-primary": "#002388",
+                    "inverse-surface": "#e2e2e8",
+                    "on-primary-container": "#efefff",
+                    "tertiary": "#ffb4aa",
+                    "on-error": "#690005",
+                    "on-tertiary-container": "#ffece9",
+                    "primary-fixed": "#dde1ff",
+                    "error": "#ffb4ab",
+                    "secondary-fixed-dim": "#ffba3f",
+                    "on-tertiary-fixed-variant": "#930005",
+                    "on-surface-variant": "#c4c5d9",
+                    "outline": "#8e90a2",
+                    "tertiary-fixed": "#ffdad5",
+                    "surface-container-high": "#282a2e",
+                    "on-secondary": "#432c00",
+                    "on-primary-fixed": "#001356",
+                    "tertiary-fixed-dim": "#ffb4aa",
+                    "on-surface": "#e2e2e8",
+                    "inverse-on-surface": "#2f3035",
+                    "surface-variant": "#333539"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin": "24px",
+                    "unit": "4px",
+                    "panel-padding": "12px",
+                    "gutter": "16px"
+            },
+            "fontFamily": {
+                    "display-kpi": ["Inter"],
+                    "mono-data": ["JetBrains Mono"],
+                    "body-md": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "headline-sm": ["Inter"],
+                    "headline-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "display-kpi": ["48px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                    "mono-data": ["13px", { "lineHeight": "16px", "fontWeight": "500" }],
+                    "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                    "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                    "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }],
+                    "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+                    "headline-lg": ["24px", { "lineHeight": "32px", "fontWeight": "600" }]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        /* Functional Brutalism Resets */
+        * { border-radius: 0 !important; }
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: #111317; }
+        ::-webkit-scrollbar-thumb { background: #434656; }
+        ::-webkit-scrollbar-thumb:hover { background: #8e90a2; }
+    </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen overflow-hidden flex font-body-md text-body-md">
+<!-- TopNavBar -->
+<header class="bg-surface border-b border-outline-variant flex justify-between items-center w-full px-margin h-16 z-50 fixed top-0 left-0">
+<div class="flex items-center gap-4">
+<span class="font-headline-lg text-headline-lg font-black tracking-tight text-primary uppercase">LaneGuard</span>
+</div>
+<div class="flex items-center gap-6">
+<!-- Search Bar placeholder -->
+<div class="hidden md:flex items-center border border-outline-variant bg-surface-container px-3 py-1">
+<span class="material-symbols-outlined text-on-surface-variant text-sm mr-2" style="font-variation-settings: 'FILL' 0;">search</span>
+<input class="bg-transparent border-none text-on-surface focus:ring-0 font-mono-data text-mono-data w-48 placeholder:text-on-surface-variant" placeholder="Search systems..." type="text"/>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-primary hover:bg-surface-container-highest transition-colors p-2 flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">notifications</span>
+</button>
+<button class="text-primary hover:bg-surface-container-highest transition-colors p-2 flex items-center justify-center">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">settings</span>
+</button>
+<button class="bg-tertiary-container text-on-tertiary-container font-label-caps text-label-caps px-4 py-2 border border-tertiary-container hover:bg-error transition-colors uppercase">
+                    Emergency Alert
+                </button>
+</div>
+</div>
+</header>
+<!-- SideNavBar -->
+<nav class="bg-surface-container border-r border-outline-variant fixed left-0 top-16 bottom-0 flex flex-col z-40 w-[280px]">
+<!-- Header -->
+<div class="p-margin border-b border-outline-variant flex items-center gap-4">
+<div class="w-10 h-10 bg-surface-container-highest border border-outline-variant flex items-center justify-center overflow-hidden">
+<span class="material-symbols-outlined text-on-surface-variant">person</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface">BTP HQ</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Sector 01</div>
+</div>
+</div>
+<!-- Nav Links -->
+<div class="flex-1 overflow-y-auto py-4 flex flex-col gap-1">
+<a class="flex items-center gap-3 px-margin py-3 text-on-surface-variant hover:bg-surface-container-high transition-all duration-150 ease-in-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">map</span>
+<span class="font-label-caps text-label-caps">Live Map</span>
+</a>
+<a class="flex items-center gap-3 px-margin py-3 text-on-surface-variant hover:bg-surface-container-high transition-all duration-150 ease-in-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">security_update_warning</span>
+<span class="font-label-caps text-label-caps">Interventions</span>
+</a>
+<a class="flex items-center gap-3 px-margin py-3 text-on-surface-variant hover:bg-surface-container-high transition-all duration-150 ease-in-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">analytics</span>
+<span class="font-label-caps text-label-caps">Analytics</span>
+</a>
+<a class="flex items-center gap-3 px-margin py-3 text-on-surface-variant hover:bg-surface-container-high transition-all duration-150 ease-in-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">hub</span>
+<span class="font-label-caps text-label-caps">Stations</span>
+</a>
+<!-- Active Tab -->
+<a class="flex items-center gap-3 px-margin py-3 bg-primary-container text-on-primary-container border-l-4 border-primary font-bold transition-all duration-150 ease-in-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">policy</span>
+<span class="font-label-caps text-label-caps">Policy</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="ml-[280px] mt-16 w-full h-[calc(100vh-64px)] overflow-y-auto bg-background p-margin flex flex-col gap-margin">
+<!-- Header & Tabs -->
+<div class="flex flex-col gap-6">
+<div class="flex justify-between items-end">
+<div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface uppercase tracking-wide">Policy Recommendations</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Algorithmic decision-support based on 30-day historical traffic variance.</p>
+</div>
+<div class="flex items-center gap-2 font-mono-data text-mono-data text-on-surface-variant bg-surface-container px-3 py-1 border border-outline-variant">
+<span class="w-2 h-2 bg-primary block rounded-full"></span>
+                    SYNCED: JUST NOW
+                </div>
+</div>
+<!-- Categories / Tabs -->
+<div class="flex border-b border-outline-variant">
+<button class="px-6 py-3 font-label-caps text-label-caps border-b-2 border-primary text-primary bg-surface-container-highest uppercase">
+                    Immediate Operations
+                </button>
+<button class="px-6 py-3 font-label-caps text-label-caps border-b-2 border-transparent text-on-surface-variant hover:bg-surface-container transition-colors uppercase">
+                    Short-term Infrastructure
+                </button>
+<button class="px-6 py-3 font-label-caps text-label-caps border-b-2 border-transparent text-on-surface-variant hover:bg-surface-container transition-colors uppercase">
+                    Medium-term Policy
+                </button>
+</div>
+</div>
+<!-- Content Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter flex-1 items-start">
+<!-- List View: Ranked Interventions -->
+<div class="lg:col-span-8 flex flex-col gap-unit">
+<!-- Rank Header -->
+<div class="grid grid-cols-12 gap-4 px-panel-padding py-2 bg-surface-container-low border border-outline-variant text-on-surface-variant font-label-caps text-label-caps uppercase">
+<div class="col-span-1 text-center">Rank</div>
+<div class="col-span-8">Hotspot &amp; Intervention Protocol</div>
+<div class="col-span-3 text-right">Confidence</div>
+</div>
+<!-- Card 1 -->
+<div class="bg-surface border border-outline-variant p-panel-padding flex flex-col gap-3 hover:border-primary transition-colors cursor-pointer group relative overflow-hidden">
+<div class="absolute top-0 left-0 w-1 h-full bg-error"></div>
+<div class="grid grid-cols-12 gap-4 items-start ml-2">
+<!-- Rank -->
+<div class="col-span-1 flex justify-center">
+<span class="font-display-kpi text-display-kpi text-on-surface-variant opacity-50 group-hover:opacity-100 transition-opacity">01</span>
+</div>
+<!-- Content -->
+<div class="col-span-8 flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-error text-sm" style="font-variation-settings: 'FILL' 1;">warning</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface hover:text-primary transition-colors inline-block border-b border-dashed border-outline-variant">Silk Board Junction - Sector 4</h3>
+<span class="bg-surface-container font-mono-data text-mono-data text-on-surface-variant px-1 border border-outline-variant">ID: HX-882</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">Deploy manual traffic marshals during 17:00-20:00 window. Override automated signal phasing to prioritize North-bound flow.</p>
+<!-- Reason Chips -->
+<div class="flex flex-wrap gap-2 mt-1">
+<div class="bg-error-container text-on-error-container border border-error px-2 py-1 flex items-center gap-1 font-mono-data text-mono-data text-[11px]">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+                                    +14% PEAK DELAY (7d)
+                                </div>
+<div class="bg-surface-container-highest text-on-surface border border-outline-variant px-2 py-1 flex items-center gap-1 font-mono-data text-mono-data text-[11px]">
+<span class="material-symbols-outlined text-[14px]">sensors</span>
+                                    SENSOR FAULT DETECTED
+                                </div>
+</div>
+</div>
+<!-- Strength -->
+<div class="col-span-3 flex flex-col items-end justify-start gap-1">
+<div class="font-mono-data text-mono-data text-primary text-lg">94.2%</div>
+<div class="w-full bg-surface-container h-2 border border-outline-variant mt-1">
+<div class="bg-primary h-full" style="width: 94%;"></div>
+</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant mt-1 uppercase">High Confidence</div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface border border-outline-variant p-panel-padding flex flex-col gap-3 hover:border-primary transition-colors cursor-pointer group relative overflow-hidden">
+<div class="absolute top-0 left-0 w-1 h-full bg-secondary-container"></div>
+<div class="grid grid-cols-12 gap-4 items-start ml-2">
+<!-- Rank -->
+<div class="col-span-1 flex justify-center">
+<span class="font-display-kpi text-display-kpi text-on-surface-variant opacity-50 group-hover:opacity-100 transition-opacity">02</span>
+</div>
+<!-- Content -->
+<div class="col-span-8 flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-container text-sm" style="font-variation-settings: 'FILL' 1;">error</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface hover:text-primary transition-colors inline-block border-b border-dashed border-outline-variant">KR Puram Bridge Approach</h3>
+<span class="bg-surface-container font-mono-data text-mono-data text-on-surface-variant px-1 border border-outline-variant">ID: KP-109</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">Restrict heavy vehicle movement (HTV) completely between 08:00-11:00. Route diversions via Old Madras Road.</p>
+<!-- Reason Chips -->
+<div class="flex flex-wrap gap-2 mt-1">
+<div class="bg-secondary text-on-secondary border border-secondary-container px-2 py-1 flex items-center gap-1 font-mono-data text-mono-data text-[11px]">
+<span class="material-symbols-outlined text-[14px]">local_shipping</span>
+                                    HTV VOL +8%
+                                </div>
+</div>
+</div>
+<!-- Strength -->
+<div class="col-span-3 flex flex-col items-end justify-start gap-1">
+<div class="font-mono-data text-mono-data text-secondary text-lg">88.5%</div>
+<div class="w-full bg-surface-container h-2 border border-outline-variant mt-1">
+<div class="bg-secondary h-full" style="width: 88%;"></div>
+</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant mt-1 uppercase">Med-High Confidence</div>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface border border-outline-variant p-panel-padding flex flex-col gap-3 hover:border-primary transition-colors cursor-pointer group relative overflow-hidden opacity-80">
+<div class="absolute top-0 left-0 w-1 h-full bg-primary"></div>
+<div class="grid grid-cols-12 gap-4 items-start ml-2">
+<div class="col-span-1 flex justify-center">
+<span class="font-display-kpi text-display-kpi text-on-surface-variant opacity-50 group-hover:opacity-100 transition-opacity">03</span>
+</div>
+<div class="col-span-8 flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">info</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface hover:text-primary transition-colors inline-block border-b border-dashed border-outline-variant">MG Road / Brigade Rd Intersection</h3>
+<span class="bg-surface-container font-mono-data text-mono-data text-on-surface-variant px-1 border border-outline-variant">ID: CB-042</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">Extend pedestrian crossing phase by +15 seconds on weekends to clear queueing.</p>
+<div class="flex flex-wrap gap-2 mt-1">
+<div class="bg-primary-fixed text-on-primary-fixed border border-primary px-2 py-1 flex items-center gap-1 font-mono-data text-mono-data text-[11px]">
+<span class="material-symbols-outlined text-[14px]">directions_walk</span>
+                                    PEDESTRIAN SPILLOVER
+                                </div>
+</div>
+</div>
+<div class="col-span-3 flex flex-col items-end justify-start gap-1">
+<div class="font-mono-data text-mono-data text-primary-fixed text-lg">72.0%</div>
+<div class="w-full bg-surface-container h-2 border border-outline-variant mt-1">
+<div class="bg-primary-fixed h-full" style="width: 72%;"></div>
+</div>
+<div class="font-label-caps text-label-caps text-on-surface-variant mt-1 uppercase">Moderate Confidence</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Panel: Disclaimer & Context -->
+<div class="lg:col-span-4 flex flex-col gap-margin">
+<!-- Policy Note / Disclaimer -->
+<div class="bg-surface-container-high border border-outline-variant p-margin relative overflow-hidden">
+<!-- Hazard stripes accent -->
+<div class="absolute top-0 left-0 w-full h-1 bg-[repeating-linear-gradient(45deg,transparent,transparent_10px,#ffb211_10px,#ffb211_20px)]"></div>
+<div class="flex items-start gap-3 mt-2">
+<span class="material-symbols-outlined text-secondary-container mt-1" style="font-variation-settings: 'FILL' 1;">gavel</span>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-secondary-container uppercase">Policy Advisory Notice</h4>
+<p class="font-body-sm text-body-sm text-on-surface mt-2 leading-relaxed">
+                                Recommendations generated are data-led suggestions intended for civil review. They do <span class="font-bold text-error">not</span> constitute final executive orders.
+                            </p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 border-t border-outline-variant pt-2">
+                                Operator discretion is required before deployment. System confidence represents statistical probability of flow improvement, not absolute guarantee.
+                            </p>
+</div>
+</div>
+</div>
+<!-- Context Data Widget -->
+<div class="bg-surface border border-outline-variant p-panel-padding">
+<h4 class="font-label-caps text-label-caps text-on-surface-variant uppercase border-b border-outline-variant pb-2 mb-3">Analysis Context</h4>
+<div class="flex flex-col gap-3">
+<div class="flex justify-between items-center">
+<span class="font-body-sm text-body-sm text-on-surface">Data Window</span>
+<span class="font-mono-data text-mono-data text-primary">T-30 DAYS</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-body-sm text-body-sm text-on-surface">Nodes Evaluated</span>
+<span class="font-mono-data text-mono-data text-on-surface">4,892</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-body-sm text-body-sm text-on-surface">Model Version</span>
+<span class="font-mono-data text-mono-data text-on-surface-variant">v4.2.1-btp</span>
+</div>
+</div>
+<button class="w-full mt-4 bg-transparent border border-primary text-primary font-label-caps text-label-caps py-2 hover:bg-primary hover:text-on-primary transition-colors uppercase">
+                        View Full Calculation Log
+                    </button>
+</div>
+<!-- Action Placeholder -->
+<div class="bg-surface border border-outline-variant p-panel-padding flex items-center justify-center h-32 border-dashed">
+<span class="font-label-caps text-label-caps text-outline-variant">Reserved for Map Mini-View</span>
+</div>
+</div>
+</div>
+</main>
+</body></html>

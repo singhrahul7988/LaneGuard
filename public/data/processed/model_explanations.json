@@ -1,0 +1,14 @@
+{
+  "model_name": "xgboost_hotspot_classifier_v2",
+  "description": "Tuned and probability-calibrated time-split next-shift hotspot classifier using corridor recurrence, station pressure, structural road-risk signals, and recency-aware momentum features.",
+  "feature_groups": [
+    "current-shift activity and recent momentum",
+    "same-corridor recurrence history",
+    "station pressure context",
+    "severity and structural road risk",
+    "calendar timing and weekend context",
+    "dormancy and staleness controls",
+    "night-shift interactions",
+    "sparse-corridor recovery features"
+  ]
+}

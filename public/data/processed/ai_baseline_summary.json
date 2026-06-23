@@ -1,0 +1,17 @@
+{
+  "model_type": "heuristic_baseline_for_future_ml_benchmarking",
+  "training_rows": 83762,
+  "positive_next_shift_rows": 13770,
+  "positive_rate": 0.1644,
+  "mae_next_shift_records": 2.874,
+  "precision_at_risk_55": 0.33,
+  "recall_at_risk_55": 0.419,
+  "latest_observed_service_date": "2024-04-08",
+  "latest_observed_shift": "Afternoon",
+  "forecast_target_service_date": "2024-04-08",
+  "forecast_target_shift": "Night",
+  "notes": [
+    "This is a benchmark artifact, not a trained ML model.",
+    "It creates the modeling-ready baseline needed to compare future predictive models honestly."
+  ]
+}

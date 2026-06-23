@@ -1,0 +1,765 @@
+{
+  "generated_at": "2026-06-23T07:09:17.976996+00:00",
+  "model_name": "xgboost_hotspot_classifier_v2",
+  "chosen_threshold": 0.3,
+  "validation_confusion": {
+    "threshold": 0.3,
+    "true_positive": 600,
+    "false_positive": 370,
+    "true_negative": 5397,
+    "false_negative": 499
+  },
+  "test_confusion": {
+    "threshold": 0.3,
+    "true_positive": 735,
+    "false_positive": 431,
+    "true_negative": 6091,
+    "false_negative": 539
+  },
+  "validation_reliability": {
+    "raw": [
+      {
+        "bin": 1,
+        "range_start": 0.0,
+        "range_end": 0.1,
+        "rows": 1146,
+        "mean_predicted_probability": 0.0552,
+        "empirical_positive_rate": 0.0175
+      },
+      {
+        "bin": 2,
+        "range_start": 0.1,
+        "range_end": 0.2,
+        "rows": 1250,
+        "mean_predicted_probability": 0.147,
+        "empirical_positive_rate": 0.0456
+      },
+      {
+        "bin": 3,
+        "range_start": 0.2,
+        "range_end": 0.3,
+        "rows": 1129,
+        "mean_predicted_probability": 0.252,
+        "empirical_positive_rate": 0.062
+      },
+      {
+        "bin": 4,
+        "range_start": 0.3,
+        "range_end": 0.4,
+        "rows": 887,
+        "mean_predicted_probability": 0.3478,
+        "empirical_positive_rate": 0.0879
+      },
+      {
+        "bin": 5,
+        "range_start": 0.4,
+        "range_end": 0.5,
+        "rows": 669,
+        "mean_predicted_probability": 0.4475,
+        "empirical_positive_rate": 0.1211
+      },
+      {
+        "bin": 6,
+        "range_start": 0.5,
+        "range_end": 0.6,
+        "rows": 505,
+        "mean_predicted_probability": 0.5468,
+        "empirical_positive_rate": 0.202
+      },
+      {
+        "bin": 7,
+        "range_start": 0.6,
+        "range_end": 0.7,
+        "rows": 352,
+        "mean_predicted_probability": 0.6495,
+        "empirical_positive_rate": 0.3068
+      },
+      {
+        "bin": 8,
+        "range_start": 0.7,
+        "range_end": 0.8,
+        "rows": 295,
+        "mean_predicted_probability": 0.7512,
+        "empirical_positive_rate": 0.3864
+      },
+      {
+        "bin": 9,
+        "range_start": 0.8,
+        "range_end": 0.9,
+        "rows": 238,
+        "mean_predicted_probability": 0.8499,
+        "empirical_positive_rate": 0.4832
+      },
+      {
+        "bin": 10,
+        "range_start": 0.9,
+        "range_end": 1.0,
+        "rows": 395,
+        "mean_predicted_probability": 0.9725,
+        "empirical_positive_rate": 0.8962
+      }
+    ],
+    "calibrated": [
+      {
+        "bin": 1,
+        "range_start": 0.0,
+        "range_end": 0.1,
+        "rows": 3974,
+        "mean_predicted_probability": 0.0445,
+        "empirical_positive_rate": 0.046
+      },
+      {
+        "bin": 2,
+        "range_start": 0.1,
+        "range_end": 0.2,
+        "rows": 1407,
+        "mean_predicted_probability": 0.1416,
+        "empirical_positive_rate": 0.1301
+      },
+      {
+        "bin": 3,
+        "range_start": 0.2,
+        "range_end": 0.3,
+        "rows": 515,
+        "mean_predicted_probability": 0.2452,
+        "empirical_positive_rate": 0.2583
+      },
+      {
+        "bin": 4,
+        "range_start": 0.3,
+        "range_end": 0.4,
+        "rows": 252,
+        "mean_predicted_probability": 0.3469,
+        "empirical_positive_rate": 0.3849
+      },
+      {
+        "bin": 5,
+        "range_start": 0.4,
+        "range_end": 0.5,
+        "rows": 180,
+        "mean_predicted_probability": 0.4419,
+        "empirical_positive_rate": 0.4444
+      },
+      {
+        "bin": 6,
+        "range_start": 0.5,
+        "range_end": 0.6,
+        "rows": 115,
+        "mean_predicted_probability": 0.5493,
+        "empirical_positive_rate": 0.4783
+      },
+      {
+        "bin": 7,
+        "range_start": 0.6,
+        "range_end": 0.7,
+        "rows": 89,
+        "mean_predicted_probability": 0.645,
+        "empirical_positive_rate": 0.5955
+      },
+      {
+        "bin": 8,
+        "range_start": 0.7,
+        "range_end": 0.8,
+        "rows": 74,
+        "mean_predicted_probability": 0.7487,
+        "empirical_positive_rate": 0.7838
+      },
+      {
+        "bin": 9,
+        "range_start": 0.8,
+        "range_end": 0.9,
+        "rows": 30,
+        "mean_predicted_probability": 0.8354,
+        "empirical_positive_rate": 0.9
+      },
+      {
+        "bin": 10,
+        "range_start": 0.9,
+        "range_end": 1.0,
+        "rows": 230,
+        "mean_predicted_probability": 0.9935,
+        "empirical_positive_rate": 1.0
+      }
+    ]
+  },
+  "test_reliability": {
+    "raw": [
+      {
+        "bin": 1,
+        "range_start": 0.0,
+        "range_end": 0.1,
+        "rows": 1262,
+        "mean_predicted_probability": 0.0514,
+        "empirical_positive_rate": 0.0119
+      },
+      {
+        "bin": 2,
+        "range_start": 0.1,
+        "range_end": 0.2,
+        "rows": 1445,
+        "mean_predicted_probability": 0.1485,
+        "empirical_positive_rate": 0.0311
+      },
+      {
+        "bin": 3,
+        "range_start": 0.2,
+        "range_end": 0.3,
+        "rows": 1246,
+        "mean_predicted_probability": 0.2499,
+        "empirical_positive_rate": 0.0682
+      },
+      {
+        "bin": 4,
+        "range_start": 0.3,
+        "range_end": 0.4,
+        "rows": 1099,
+        "mean_predicted_probability": 0.3455,
+        "empirical_positive_rate": 0.0837
+      },
+      {
+        "bin": 5,
+        "range_start": 0.4,
+        "range_end": 0.5,
+        "rows": 718,
+        "mean_predicted_probability": 0.449,
+        "empirical_positive_rate": 0.1309
+      },
+      {
+        "bin": 6,
+        "range_start": 0.5,
+        "range_end": 0.6,
+        "rows": 546,
+        "mean_predicted_probability": 0.5459,
+        "empirical_positive_rate": 0.2088
+      },
+      {
+        "bin": 7,
+        "range_start": 0.6,
+        "range_end": 0.7,
+        "rows": 371,
+        "mean_predicted_probability": 0.6525,
+        "empirical_positive_rate": 0.31
+      },
+      {
+        "bin": 8,
+        "range_start": 0.7,
+        "range_end": 0.8,
+        "rows": 339,
+        "mean_predicted_probability": 0.7502,
+        "empirical_positive_rate": 0.3658
+      },
+      {
+        "bin": 9,
+        "range_start": 0.8,
+        "range_end": 0.9,
+        "rows": 307,
+        "mean_predicted_probability": 0.8464,
+        "empirical_positive_rate": 0.5309
+      },
+      {
+        "bin": 10,
+        "range_start": 0.9,
+        "range_end": 1.0,
+        "rows": 463,
+        "mean_predicted_probability": 0.9763,
+        "empirical_positive_rate": 0.9222
+      }
+    ],
+    "calibrated": [
+      {
+        "bin": 1,
+        "range_start": 0.0,
+        "range_end": 0.1,
+        "rows": 4547,
+        "mean_predicted_probability": 0.0452,
+        "empirical_positive_rate": 0.0422
+      },
+      {
+        "bin": 2,
+        "range_start": 0.1,
+        "range_end": 0.2,
+        "rows": 1544,
+        "mean_predicted_probability": 0.1408,
+        "empirical_positive_rate": 0.1302
+      },
+      {
+        "bin": 3,
+        "range_start": 0.2,
+        "range_end": 0.3,
+        "rows": 539,
+        "mean_predicted_probability": 0.2445,
+        "empirical_positive_rate": 0.2709
+      },
+      {
+        "bin": 4,
+        "range_start": 0.3,
+        "range_end": 0.4,
+        "rows": 307,
+        "mean_predicted_probability": 0.3464,
+        "empirical_positive_rate": 0.3681
+      },
+      {
+        "bin": 5,
+        "range_start": 0.4,
+        "range_end": 0.5,
+        "rows": 233,
+        "mean_predicted_probability": 0.4449,
+        "empirical_positive_rate": 0.4292
+      },
+      {
+        "bin": 6,
+        "range_start": 0.5,
+        "range_end": 0.6,
+        "rows": 121,
+        "mean_predicted_probability": 0.5476,
+        "empirical_positive_rate": 0.5702
+      },
+      {
+        "bin": 7,
+        "range_start": 0.6,
+        "range_end": 0.7,
+        "rows": 96,
+        "mean_predicted_probability": 0.6438,
+        "empirical_positive_rate": 0.7083
+      },
+      {
+        "bin": 8,
+        "range_start": 0.7,
+        "range_end": 0.8,
+        "rows": 84,
+        "mean_predicted_probability": 0.7464,
+        "empirical_positive_rate": 0.7738
+      },
+      {
+        "bin": 9,
+        "range_start": 0.8,
+        "range_end": 0.9,
+        "rows": 33,
+        "mean_predicted_probability": 0.8301,
+        "empirical_positive_rate": 0.8485
+      },
+      {
+        "bin": 10,
+        "range_start": 0.9,
+        "range_end": 1.0,
+        "rows": 292,
+        "mean_predicted_probability": 0.9937,
+        "empirical_positive_rate": 1.0
+      }
+    ]
+  },
+  "top_false_positives": [
+    {
+      "cluster_id": "12.964:77.577",
+      "police_station": "City Market",
+      "location": "KR Main Road, City Market Circle, Bengaluru, Karnataka. Pin-560002 (India)",
+      "target_next_shift": "Night",
+      "severity_band": "critical",
+      "actual_next_shift_records": 0,
+      "predicted_probability": 0.8569,
+      "predicted_next_shift_records": 7.74,
+      "staleness_slots_since_active": 0,
+      "same_shift_records_7d": 136,
+      "station_same_shift_records_7d": 262
+    },
+    {
+      "cluster_id": "12.964:77.577",
+      "police_station": "City Market",
+      "location": "KR Main Road, City Market Circle, Bengaluru, Karnataka. Pin-560002 (India)",
+      "target_next_shift": "Night",
+      "severity_band": "critical",
+      "actual_next_shift_records": 0,
+      "predicted_probability": 0.8517,
+      "predicted_next_shift_records": 8.55,
+      "staleness_slots_since_active": 0,
+      "same_shift_records_7d": 113,
+      "station_same_shift_records_7d": 192
+    },
+    {
+      "cluster_id": "12.973:77.579",
+      "police_station": "Upparpet",
+      "location": "3rd Cross Road, Kempegowda Extension, Chickpete, Bengaluru, Karnataka. Pin-560009 (India)",
+      "target_next_shift": "Night",
+      "severity_band": "high",
+      "actual_next_shift_records": 0,
+      "predicted_probability": 0.8263,
+      "predicted_next_shift_records": 14.24,
+      "staleness_slots_since_active": 0,
+      "same_shift_records_7d": 7,
+      "station_same_shift_records_7d": 267
+    },
+    {
+      "cluster_id": "13.000:77.550",
+      "police_station": "Malleshwaram",
+      "location": "WOC Road, Block 1, Rajaji Nagar, Bengaluru, Karnataka. Pin-560010 (India)",
+      "target_next_shift": "Night",
+      "severity_band": "high",
+      "actual_next_shift_records": 0,
+      "predicted_probability": 0.8172,
+      "predicted_next_shift_records": 11.5,
+      "staleness_slots_since_active": 0,
+      "same_shift_records_7d": 6,
+      "station_same_shift_records_7d": 56
+    },
+    {
+      "cluster_id": "12.977:77.576",
+      "police_station": "Upparpet",
+      "location": "6th Main Road, RK Puram, Gandhi Nagar, Bengaluru, Karnataka. Pin-560009 (India)",
+      "target_next_shift": "Night",
+      "severity_band": "high",
+      "actual_next_shift_records": 0,
+      "predicted_probability": 0.8083,
+      "predicted_next_shift_records": 21.28,
+      "staleness_slots_since_active": 0,
+      "same_shift_records_7d": 11,
+      "station_same_shift_records_7d": 361
+    },
+    {
+      "cluster_id": "12.978:77.574",
+      "police_station": "Upparpet",
+      "location": "Major T Ramachandrappa Road, AT Extension, Gandhi Nagar, Bengaluru, Karnataka. Pin-560009 (India)",
+      "target_next_shift": "Night",
+      "severity_band": "high",
+      "actual_next_shift_records": 0,
+      "predicted_probability": 0.7918,
+      "predicted_next_shift_records": 11.5,
+      "staleness_slots_since_active": 0,
+      "same_shift_records_7d": 11,
+      "station_same_shift_records_7d": 296
+    },
+    {
+      "cluster_id": "13.184:77.680",
+      "police_station": "Chikkajala",
+      "location": "Unnamed Road, Begur Chikkanahalli, Bengaluru, Karnataka. Pin-562149 (India)",
+      "target_next_shift": "Night",
+      "severity_band": "high",
+      "actual_next_shift_records": 0,
+      "predicted_probability": 0.7888,
+      "predicted_next_shift_records": 5.72,
+      "staleness_slots_since_active": 0,
+      "same_shift_records_7d": 5,
+      "station_same_shift_records_7d": 24
+    },
+    {
+      "cluster_id": "12.977:77.577",
+      "police_station": "Upparpet",
+      "location": "5th Main Road, Kempe Gowda Circle, Gandhi Nagar, Bengaluru, Karnataka. Pin-560009 (India)",
+      "target_next_shift": "Night",
+      "severity_band": "high",
+      "actual_next_shift_records": 0,
+      "predicted_probability": 0.7773,
+      "predicted_next_shift_records": 9.26,
+      "staleness_slots_since_active": 0,
+      "same_shift_records_7d": 33,
+      "station_same_shift_records_7d": 204
+    },
+    {
+      "cluster_id": "13.184:77.680",
+      "police_station": "Chikkajala",
+      "location": "Unnamed Road, Begur Chikkanahalli, Bengaluru, Karnataka. Pin-562149 (India)",
+      "target_next_shift": "Night",
+      "severity_band": "high",
+      "actual_next_shift_records": 0,
+      "predicted_probability": 0.7735,
+      "predicted_next_shift_records": 8.16,
+      "staleness_slots_since_active": 0,
+      "same_shift_records_7d": 3,
+      "station_same_shift_records_7d": 9
+    },
+    {
+      "cluster_id": "12.977:77.577",
+      "police_station": "Upparpet",
+      "location": "5th Main Road, Kempe Gowda Circle, Gandhi Nagar, Bengaluru, Karnataka. Pin-560009 (India)",
+      "target_next_shift": "Night",
+      "severity_band": "high",
+      "actual_next_shift_records": 0,
+      "predicted_probability": 0.7726,
+      "predicted_next_shift_records": 10.88,
+      "staleness_slots_since_active": 0,
+      "same_shift_records_7d": 24,
+      "station_same_shift_records_7d": 361
+    },
+    {
+      "cluster_id": "12.973:77.579",
+      "police_station": "Upparpet",
+      "location": "3rd Cross Road, Kempegowda Extension, Chickpete, Bengaluru, Karnataka. Pin-560009 (India)",
+      "target_next_shift": "Night",
+      "severity_band": "high",
+      "actual_next_shift_records": 0,
+      "predicted_probability": 0.7503,
+      "predicted_next_shift_records": 13.13,
+      "staleness_slots_since_active": 0,
+      "same_shift_records_7d": 4,
+      "station_same_shift_records_7d": 267
+    },
+    {
+      "cluster_id": "12.978:77.575",
+      "police_station": "Upparpet",
+      "location": "Subedar Chatram Road, RK Puram, Gandhi Nagar, Bengaluru, Karnataka. Pin-560009 (India)",
+      "target_next_shift": "Night",
+      "severity_band": "high",
+      "actual_next_shift_records": 0,
+      "predicted_probability": 0.742,
+      "predicted_next_shift_records": 6.78,
+      "staleness_slots_since_active": 0,
+      "same_shift_records_7d": 6,
+      "station_same_shift_records_7d": 296
+    }
+  ],
+  "top_false_negatives": [
+    {
+      "cluster_id": "12.932:77.632",
+      "police_station": "Adugodi",
+      "location": "Srinivagilu Main Road, ST Bed Layout Extension, Block 4, Koramangala, Bengaluru, Karnataka. Pin-560034 (India)",
+      "target_next_shift": "Morning",
+      "severity_band": "moderate",
+      "actual_next_shift_records": 27,
+      "predicted_probability": 0.2045,
+      "predicted_next_shift_records": 0.75,
+      "staleness_slots_since_active": 0,
+      "same_shift_records_7d": 1,
+      "station_same_shift_records_7d": 84
+    },
+    {
+      "cluster_id": "12.978:77.578",
+      "police_station": "Upparpet",
+      "location": "4th Main Road, Sri Kanakadasa Circle, Gandhi Nagar, Bengaluru, Karnataka. Pin-560009 (India)",
+      "target_next_shift": "Night",
+      "severity_band": "moderate",
+      "actual_next_shift_records": 18,
+      "predicted_probability": 0.2157,
+      "predicted_next_shift_records": 1.34,
+      "staleness_slots_since_active": 0,
+      "same_shift_records_7d": 17,
+      "station_same_shift_records_7d": 424
+    },
+    {
+      "cluster_id": "12.931:77.633",
+      "police_station": "Adugodi",
+      "location": "Srinivagilu Main Road, Block 1, Koramangala, Bengaluru, Karnataka. Pin-560034 (India)",
+      "target_next_shift": "Morning",
+      "severity_band": "moderate",
+      "actual_next_shift_records": 16,
+      "predicted_probability": 0.0919,
+      "predicted_next_shift_records": 0.23,
+      "staleness_slots_since_active": 0,
+      "same_shift_records_7d": 3,
+      "station_same_shift_records_7d": 84
+    },
+    {
+      "cluster_id": "12.971:77.593",
+      "police_station": "Halasuru Gate",
+      "location": "Kasturba Road, Siddalingaiah Circle, Gandhi Nagar, Bengaluru, Karnataka. Pin-560001 (India)",
+      "target_next_shift": "Night",
+      "severity_band": "moderate",
+      "actual_next_shift_records": 13,
+      "predicted_probability": 0.2561,
+      "predicted_next_shift_records": 0.51,
+      "staleness_slots_since_active": 0,
+      "same_shift_records_7d": 0,
+      "station_same_shift_records_7d": 36
+    },
+    {
+      "cluster_id": "12.939:77.584",
+      "police_station": "Wilson Garden",
+      "location": "9th Main Road, Block 2, Jayanagar East, Bengaluru, Karnataka. Pin-560011 (India)",
+      "target_next_shift": "Afternoon",
+      "severity_band": "moderate",
+      "actual_next_shift_records": 12,
+      "predicted_probability": 0.0621,
+      "predicted_next_shift_records": 0.0,
+      "staleness_slots_since_active": 0,
+      "same_shift_records_7d": 5,
+      "station_same_shift_records_7d": 34
+    },
+    {
+      "cluster_id": "12.975:77.547",
+      "police_station": "Vijayanagara",
+      "location": "Chord Road, Sindhya Sunshine Apartment, Vijaya Nagar, Bengaluru, Karnataka. Pin-560040 (India)",
+      "target_next_shift": "Morning",
+      "severity_band": "moderate",
+      "actual_next_shift_records": 12,
+      "predicted_probability": 0.0756,
+      "predicted_next_shift_records": 0.16,
+      "staleness_slots_since_active": 0,
+      "same_shift_records_7d": 0,
+      "station_same_shift_records_7d": 260
+    },
+    {
+      "cluster_id": "12.988:77.734",
+      "police_station": "Mahadevapura",
+      "location": "Whitefield Road, Sadaramangala Industrial Area, Whitefield, Bengaluru, Karnataka. Pin-560066 (India)",
+      "target_next_shift": "Morning",
+      "severity_band": "moderate",
+      "actual_next_shift_records": 12,
+      "predicted_probability": 0.1698,
+      "predicted_next_shift_records": 0.95,
+      "staleness_slots_since_active": 0,
+      "same_shift_records_7d": 37,
+      "station_same_shift_records_7d": 214
+    },
+    {
+      "cluster_id": "13.001:77.571",
+      "police_station": "Malleshwaram",
+      "location": "Sri Venkataranga Ayangar Road, Acharya Sri Ramanuja Circle, Malleshwaram, Bengaluru, Karnataka. Pin-560003 (India)",
+      "target_next_shift": "Morning",
+      "severity_band": "moderate",
+      "actual_next_shift_records": 11,
+      "predicted_probability": 0.1906,
+      "predicted_next_shift_records": 0.32,
+      "staleness_slots_since_active": 0,
+      "same_shift_records_7d": 16,
+      "station_same_shift_records_7d": 637
+    },
+    {
+      "cluster_id": "12.982:77.612",
+      "police_station": "Shivajinagar",
+      "location": "Gangadhara Chetty Road, Sri Nagamma Devi Circle, Sivanchetti Gardens, Bengaluru, Karnataka. Pin-560042 (India)",
+      "target_next_shift": "Morning",
+      "severity_band": "moderate",
+      "actual_next_shift_records": 11,
+      "predicted_probability": 0.2036,
+      "predicted_next_shift_records": 0.8,
+      "staleness_slots_since_active": 0,
+      "same_shift_records_7d": 49,
+      "station_same_shift_records_7d": 1365
+    },
+    {
+      "cluster_id": "12.972:77.658",
+      "police_station": "Jeevanbheemanagar",
+      "location": "Pusa Thippasandra Main Road, Nada Prabhu Kempegowda Circle, New Thippasandra, Bengaluru, Karnataka. Pin-560075 (India)",
+      "target_next_shift": "Morning",
+      "severity_band": "moderate",
+      "actual_next_shift_records": 11,
+      "predicted_probability": 0.2038,
+      "predicted_next_shift_records": 1.28,
+      "staleness_slots_since_active": 0,
+      "same_shift_records_7d": 15,
+      "station_same_shift_records_7d": 164
+    },
+    {
+      "cluster_id": "12.971:77.618",
+      "police_station": "Halasur",
+      "location": "Midford Garden Lane, Craig Park Layout, Ashok Nagar, Bengaluru, Karnataka. Pin-560001 (India)",
+      "target_next_shift": "Night",
+      "severity_band": "moderate",
+      "actual_next_shift_records": 11,
+      "predicted_probability": 0.2297,
+      "predicted_next_shift_records": 1.15,
+      "staleness_slots_since_active": 0,
+      "same_shift_records_7d": 0,
+      "station_same_shift_records_7d": 2
+    },
+    {
+      "cluster_id": "12.908:77.600",
+      "police_station": "J.P. Nagar",
+      "location": "Bannerghatta Main Road, JD Mara Junction, BTM Layout Stage 2, Bengaluru, Karnataka. Pin-560076 (India)",
+      "target_next_shift": "Morning",
+      "severity_band": "moderate",
+      "actual_next_shift_records": 10,
+      "predicted_probability": 0.1448,
+      "predicted_next_shift_records": 0.37,
+      "staleness_slots_since_active": 0,
+      "same_shift_records_7d": 4,
+      "station_same_shift_records_7d": 66
+    }
+  ],
+  "station_error_summary": [
+    {
+      "station": "Malleshwaram",
+      "rows": 651,
+      "actual_positive_rows": 127,
+      "false_positive": 33,
+      "false_negative": 52,
+      "avg_predicted_probability": 0.1906
+    },
+    {
+      "station": "Upparpet",
+      "rows": 646,
+      "actual_positive_rows": 209,
+      "false_positive": 126,
+      "false_negative": 48,
+      "avg_predicted_probability": 0.3418
+    },
+    {
+      "station": "Shivajinagar",
+      "rows": 501,
+      "actual_positive_rows": 148,
+      "false_positive": 38,
+      "false_negative": 48,
+      "avg_predicted_probability": 0.2602
+    },
+    {
+      "station": "City Market",
+      "rows": 425,
+      "actual_positive_rows": 103,
+      "false_positive": 36,
+      "false_negative": 46,
+      "avg_predicted_probability": 0.2211
+    },
+    {
+      "station": "Basavanagudi",
+      "rows": 275,
+      "actual_positive_rows": 58,
+      "false_positive": 9,
+      "false_negative": 29,
+      "avg_predicted_probability": 0.1664
+    },
+    {
+      "station": "Magadi Road",
+      "rows": 300,
+      "actual_positive_rows": 54,
+      "false_positive": 11,
+      "false_negative": 24,
+      "avg_predicted_probability": 0.155
+    },
+    {
+      "station": "Rajajinagar",
+      "rows": 353,
+      "actual_positive_rows": 37,
+      "false_positive": 9,
+      "false_negative": 23,
+      "avg_predicted_probability": 0.1107
+    },
+    {
+      "station": "HAL Old Airport",
+      "rows": 320,
+      "actual_positive_rows": 51,
+      "false_positive": 16,
+      "false_negative": 17,
+      "avg_predicted_probability": 0.1637
+    },
+    {
+      "station": "Vijayanagara",
+      "rows": 215,
+      "actual_positive_rows": 27,
+      "false_positive": 18,
+      "false_negative": 16,
+      "avg_predicted_probability": 0.1589
+    },
+    {
+      "station": "Wilson Garden",
+      "rows": 217,
+      "actual_positive_rows": 32,
+      "false_positive": 11,
+      "false_negative": 16,
+      "avg_predicted_probability": 0.1234
+    },
+    {
+      "station": "Mahadevapura",
+      "rows": 220,
+      "actual_positive_rows": 43,
+      "false_positive": 8,
+      "false_negative": 15,
+      "avg_predicted_probability": 0.1684
+    },
+    {
+      "station": "Chamarajpet",
+      "rows": 118,
+      "actual_positive_rows": 21,
+      "false_positive": 9,
+      "false_negative": 14,
+      "avg_predicted_probability": 0.143
+    }
+  ]
+}

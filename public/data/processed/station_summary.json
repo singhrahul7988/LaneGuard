@@ -1,0 +1,661 @@
+[
+  {
+    "station": "Upparpet",
+    "record_count": 34468,
+    "hotspot_count": 102,
+    "peak_hour_events": 5682,
+    "top_violation_labels": [
+      "WRONG PARKING",
+      "NO PARKING",
+      "PARKING IN A MAIN ROAD"
+    ],
+    "latest_event": "2024-04-08T09:06:46+00:00"
+  },
+  {
+    "station": "Shivajinagar",
+    "record_count": 28044,
+    "hotspot_count": 144,
+    "peak_hour_events": 2211,
+    "top_violation_labels": [
+      "WRONG PARKING",
+      "NO PARKING",
+      "PARKING IN A MAIN ROAD"
+    ],
+    "latest_event": "2024-04-08T08:31:46+00:00"
+  },
+  {
+    "station": "Malleshwaram",
+    "record_count": 22200,
+    "hotspot_count": 220,
+    "peak_hour_events": 1149,
+    "top_violation_labels": [
+      "WRONG PARKING",
+      "NO PARKING",
+      "PARKING IN A MAIN ROAD"
+    ],
+    "latest_event": "2024-04-08T12:56:46+00:00"
+  },
+  {
+    "station": "HAL Old Airport",
+    "record_count": 20819,
+    "hotspot_count": 311,
+    "peak_hour_events": 1187,
+    "top_violation_labels": [
+      "WRONG PARKING",
+      "NO PARKING",
+      "PARKING IN A MAIN ROAD"
+    ],
+    "latest_event": "2024-04-07T23:53:46+00:00"
+  },
+  {
+    "station": "City Market",
+    "record_count": 17646,
+    "hotspot_count": 132,
+    "peak_hour_events": 4723,
+    "top_violation_labels": [
+      "WRONG PARKING",
+      "NO PARKING",
+      "PARKING IN A MAIN ROAD"
+    ],
+    "latest_event": "2024-04-08T17:30:46+00:00"
+  },
+  {
+    "station": "Vijayanagara",
+    "record_count": 14652,
+    "hotspot_count": 204,
+    "peak_hour_events": 817,
+    "top_violation_labels": [
+      "WRONG PARKING",
+      "NO PARKING",
+      "PARKING IN A MAIN ROAD"
+    ],
+    "latest_event": "2024-04-08T09:52:46+00:00"
+  },
+  {
+    "station": "Rajajinagar",
+    "record_count": 10998,
+    "hotspot_count": 305,
+    "peak_hour_events": 762,
+    "top_violation_labels": [
+      "WRONG PARKING",
+      "NO PARKING",
+      "PARKING IN A MAIN ROAD"
+    ],
+    "latest_event": "2024-04-08T08:56:46+00:00"
+  },
+  {
+    "station": "Kodigehalli",
+    "record_count": 10916,
+    "hotspot_count": 292,
+    "peak_hour_events": 1076,
+    "top_violation_labels": [
+      "WRONG PARKING",
+      "NO PARKING",
+      "PARKING ON FOOTPATH"
+    ],
+    "latest_event": "2024-04-08T09:19:46+00:00"
+  },
+  {
+    "station": "Magadi Road",
+    "record_count": 8558,
+    "hotspot_count": 222,
+    "peak_hour_events": 475,
+    "top_violation_labels": [
+      "NO PARKING",
+      "WRONG PARKING",
+      "PARKING IN A MAIN ROAD"
+    ],
+    "latest_event": "2024-04-08T09:09:46+00:00"
+  },
+  {
+    "station": "Jeevanbheemanagar",
+    "record_count": 6736,
+    "hotspot_count": 236,
+    "peak_hour_events": 647,
+    "top_violation_labels": [
+      "NO PARKING",
+      "WRONG PARKING",
+      "PARKING IN A MAIN ROAD"
+    ],
+    "latest_event": "2024-04-08T10:48:46+00:00"
+  },
+  {
+    "station": "K.R. Pura",
+    "record_count": 6546,
+    "hotspot_count": 186,
+    "peak_hour_events": 2750,
+    "top_violation_labels": [
+      "WRONG PARKING",
+      "NO PARKING",
+      "PARKING IN A MAIN ROAD"
+    ],
+    "latest_event": "2024-04-08T00:14:46+00:00"
+  },
+  {
+    "station": "Halasuru Gate",
+    "record_count": 6294,
+    "hotspot_count": 147,
+    "peak_hour_events": 522,
+    "top_violation_labels": [
+      "WRONG PARKING",
+      "NO PARKING",
+      "PARKING IN A MAIN ROAD"
+    ],
+    "latest_event": "2024-04-08T01:50:46+00:00"
+  },
+  {
+    "station": "Mahadevapura",
+    "record_count": 6187,
+    "hotspot_count": 269,
+    "peak_hour_events": 923,
+    "top_violation_labels": [
+      "WRONG PARKING",
+      "NO PARKING",
+      "PARKING IN A MAIN ROAD"
+    ],
+    "latest_event": "2024-04-08T08:58:46+00:00"
+  },
+  {
+    "station": "Chikkajala",
+    "record_count": 5834,
+    "hotspot_count": 94,
+    "peak_hour_events": 1578,
+    "top_violation_labels": [
+      "NO PARKING",
+      "WRONG PARKING",
+      "PARKING IN A MAIN ROAD"
+    ],
+    "latest_event": "2024-04-08T09:20:46+00:00"
+  },
+  {
+    "station": "HSR Layout",
+    "record_count": 5018,
+    "hotspot_count": 204,
+    "peak_hour_events": 954,
+    "top_violation_labels": [
+      "WRONG PARKING",
+      "NO PARKING",
+      "PARKING IN A MAIN ROAD"
+    ],
+    "latest_event": "2024-04-08T06:14:46+00:00"
+  },
+  {
+    "station": "Bellandur",
+    "record_count": 4964,
+    "hotspot_count": 201,
+    "peak_hour_events": 640,
+    "top_violation_labels": [
+      "WRONG PARKING",
+      "NO PARKING",
+      "PARKING IN A MAIN ROAD"
+    ],
+    "latest_event": "2024-04-08T08:24:46+00:00"
+  },
+  {
+    "station": "High ground",
+    "record_count": 4951,
+    "hotspot_count": 129,
+    "peak_hour_events": 441,
+    "top_violation_labels": [
+      "WRONG PARKING",
+      "NO PARKING",
+      "PARKING IN A MAIN ROAD"
+    ],
+    "latest_event": "2024-04-08T00:14:46+00:00"
+  },
+  {
+    "station": "Byatarayanapura",
+    "record_count": 4555,
+    "hotspot_count": 166,
+    "peak_hour_events": 877,
+    "top_violation_labels": [
+      "WRONG PARKING",
+      "NO PARKING",
+      "PARKING IN A MAIN ROAD"
+    ],
+    "latest_event": "2024-04-08T07:04:46+00:00"
+  },
+  {
+    "station": "Electronic City",
+    "record_count": 4333,
+    "hotspot_count": 231,
+    "peak_hour_events": 768,
+    "top_violation_labels": [
+      "WRONG PARKING",
+      "NO PARKING",
+      "PARKING IN A MAIN ROAD"
+    ],
+    "latest_event": "2024-04-08T07:29:46+00:00"
+  },
+  {
+    "station": "Pulikeshinagar(F.Town)",
+    "record_count": 4136,
+    "hotspot_count": 196,
+    "peak_hour_events": 396,
+    "top_violation_labels": [
+      "NO PARKING",
+      "WRONG PARKING",
+      "PARKING ON FOOTPATH"
+    ],
+    "latest_event": "2024-04-08T07:01:46+00:00"
+  },
+  {
+    "station": "Halasur",
+    "record_count": 4011,
+    "hotspot_count": 147,
+    "peak_hour_events": 226,
+    "top_violation_labels": [
+      "NO PARKING",
+      "WRONG PARKING",
+      "PARKING IN A MAIN ROAD"
+    ],
+    "latest_event": "2024-04-08T06:59:46+00:00"
+  },
+  {
+    "station": "Jayanagara",
+    "record_count": 3813,
+    "hotspot_count": 164,
+    "peak_hour_events": 252,
+    "top_violation_labels": [
+      "NO PARKING",
+      "WRONG PARKING",
+      "PARKING IN A MAIN ROAD"
+    ],
+    "latest_event": "2024-04-08T05:12:46+00:00"
+  },
+  {
+    "station": "Chamarajpet",
+    "record_count": 3795,
+    "hotspot_count": 119,
+    "peak_hour_events": 658,
+    "top_violation_labels": [
+      "NO PARKING",
+      "WRONG PARKING",
+      "PARKING IN A MAIN ROAD"
+    ],
+    "latest_event": "2024-04-08T03:32:46+00:00"
+  },
+  {
+    "station": "Banaswadi",
+    "record_count": 3759,
+    "hotspot_count": 216,
+    "peak_hour_events": 968,
+    "top_violation_labels": [
+      "NO PARKING",
+      "WRONG PARKING",
+      "PARKING IN A MAIN ROAD"
+    ],
+    "latest_event": "2024-04-07T21:37:46+00:00"
+  },
+  {
+    "station": "Basavanagudi",
+    "record_count": 3604,
+    "hotspot_count": 134,
+    "peak_hour_events": 217,
+    "top_violation_labels": [
+      "WRONG PARKING",
+      "NO PARKING",
+      "PARKING IN A MAIN ROAD"
+    ],
+    "latest_event": "2024-04-08T07:12:46+00:00"
+  },
+  {
+    "station": "Ashok Nagar",
+    "record_count": 3524,
+    "hotspot_count": 165,
+    "peak_hour_events": 354,
+    "top_violation_labels": [
+      "NO PARKING",
+      "WRONG PARKING",
+      "PARKING IN A MAIN ROAD"
+    ],
+    "latest_event": "2024-04-08T07:19:46+00:00"
+  },
+  {
+    "station": "Adugodi",
+    "record_count": 3332,
+    "hotspot_count": 186,
+    "peak_hour_events": 514,
+    "top_violation_labels": [
+      "NO PARKING",
+      "WRONG PARKING",
+      "PARKING IN A MAIN ROAD"
+    ],
+    "latest_event": "2024-04-08T14:06:46+00:00"
+  },
+  {
+    "station": "Cubbon Park",
+    "record_count": 3255,
+    "hotspot_count": 170,
+    "peak_hour_events": 294,
+    "top_violation_labels": [
+      "NO PARKING",
+      "WRONG PARKING",
+      "PARKING IN A MAIN ROAD"
+    ],
+    "latest_event": "2024-04-08T08:07:46+00:00"
+  },
+  {
+    "station": "Hebbala",
+    "record_count": 3209,
+    "hotspot_count": 68,
+    "peak_hour_events": 252,
+    "top_violation_labels": [
+      "NO PARKING",
+      "WRONG PARKING",
+      "PARKING IN A MAIN ROAD"
+    ],
+    "latest_event": "2024-04-08T06:29:46+00:00"
+  },
+  {
+    "station": "Wilson Garden",
+    "record_count": 3108,
+    "hotspot_count": 167,
+    "peak_hour_events": 346,
+    "top_violation_labels": [
+      "NO PARKING",
+      "WRONG PARKING",
+      "PARKING IN A MAIN ROAD"
+    ],
+    "latest_event": "2024-04-08T06:23:46+00:00"
+  },
+  {
+    "station": "Sheshadripuram",
+    "record_count": 3090,
+    "hotspot_count": 127,
+    "peak_hour_events": 220,
+    "top_violation_labels": [
+      "NO PARKING",
+      "WRONG PARKING",
+      "PARKING IN A MAIN ROAD"
+    ],
+    "latest_event": "2024-04-08T06:20:46+00:00"
+  },
+  {
+    "station": "Mico Layout",
+    "record_count": 2588,
+    "hotspot_count": 129,
+    "peak_hour_events": 228,
+    "top_violation_labels": [
+      "NO PARKING",
+      "WRONG PARKING",
+      "PARKING IN A MAIN ROAD"
+    ],
+    "latest_event": "2024-04-08T00:50:46+00:00"
+  },
+  {
+    "station": "Yeshwanthpura",
+    "record_count": 2587,
+    "hotspot_count": 149,
+    "peak_hour_events": 451,
+    "top_violation_labels": [
+      "WRONG PARKING",
+      "NO PARKING",
+      "PARKING IN A MAIN ROAD"
+    ],
+    "latest_event": "2024-04-08T06:11:46+00:00"
+  },
+  {
+    "station": "Yelahanka",
+    "record_count": 2440,
+    "hotspot_count": 208,
+    "peak_hour_events": 616,
+    "top_violation_labels": [
+      "WRONG PARKING",
+      "NO PARKING",
+      "PARKING IN A MAIN ROAD"
+    ],
+    "latest_event": "2024-04-08T04:49:46+00:00"
+  },
+  {
+    "station": "Hulimavu",
+    "record_count": 2395,
+    "hotspot_count": 151,
+    "peak_hour_events": 632,
+    "top_violation_labels": [
+      "WRONG PARKING",
+      "NO PARKING",
+      "PARKING IN A MAIN ROAD"
+    ],
+    "latest_event": "2024-04-07T21:08:46+00:00"
+  },
+  {
+    "station": "Whitefield",
+    "record_count": 2303,
+    "hotspot_count": 201,
+    "peak_hour_events": 303,
+    "top_violation_labels": [
+      "WRONG PARKING",
+      "NO PARKING",
+      "PARKING IN A MAIN ROAD"
+    ],
+    "latest_event": "2024-04-08T05:08:46+00:00"
+  },
+  {
+    "station": "R.T. Nagar",
+    "record_count": 1736,
+    "hotspot_count": 129,
+    "peak_hour_events": 132,
+    "top_violation_labels": [
+      "WRONG PARKING",
+      "NO PARKING",
+      "PARKING IN A MAIN ROAD"
+    ],
+    "latest_event": "2024-04-07T22:12:46+00:00"
+  },
+  {
+    "station": "J.P. Nagar",
+    "record_count": 1637,
+    "hotspot_count": 169,
+    "peak_hour_events": 224,
+    "top_violation_labels": [
+      "NO PARKING",
+      "WRONG PARKING",
+      "PARKING IN A MAIN ROAD"
+    ],
+    "latest_event": "2024-04-08T00:00:46+00:00"
+  },
+  {
+    "station": "Madiwala",
+    "record_count": 1563,
+    "hotspot_count": 122,
+    "peak_hour_events": 381,
+    "top_violation_labels": [
+      "NO PARKING",
+      "WRONG PARKING",
+      "PARKING IN A MAIN ROAD"
+    ],
+    "latest_event": "2024-04-08T05:19:46+00:00"
+  },
+  {
+    "station": "V.V.Puram (C.Pet)",
+    "record_count": 1556,
+    "hotspot_count": 106,
+    "peak_hour_events": 409,
+    "top_violation_labels": [
+      "WRONG PARKING",
+      "NO PARKING",
+      "PARKING IN A MAIN ROAD"
+    ],
+    "latest_event": "2024-04-07T17:10:46+00:00"
+  },
+  {
+    "station": "Sadashivanagar",
+    "record_count": 1445,
+    "hotspot_count": 127,
+    "peak_hour_events": 76,
+    "top_violation_labels": [
+      "WRONG PARKING",
+      "NO PARKING",
+      "PARKING IN A MAIN ROAD"
+    ],
+    "latest_event": "2024-04-08T03:53:46+00:00"
+  },
+  {
+    "station": "Kamakshipalya",
+    "record_count": 1431,
+    "hotspot_count": 108,
+    "peak_hour_events": 132,
+    "top_violation_labels": [
+      "WRONG PARKING",
+      "NO PARKING",
+      "PARKING IN A MAIN ROAD"
+    ],
+    "latest_event": "2024-04-08T06:22:46+00:00"
+  },
+  {
+    "station": "Banashankari",
+    "record_count": 1202,
+    "hotspot_count": 119,
+    "peak_hour_events": 69,
+    "top_violation_labels": [
+      "NO PARKING",
+      "WRONG PARKING",
+      "PARKING IN A MAIN ROAD"
+    ],
+    "latest_event": "2024-04-07T07:38:46+00:00"
+  },
+  {
+    "station": "Jalahalli",
+    "record_count": 1160,
+    "hotspot_count": 94,
+    "peak_hour_events": 110,
+    "top_violation_labels": [
+      "NO PARKING",
+      "WRONG PARKING",
+      "PARKING IN A MAIN ROAD"
+    ],
+    "latest_event": "2024-04-08T05:46:46+00:00"
+  },
+  {
+    "station": "Jnanabharathi",
+    "record_count": 1063,
+    "hotspot_count": 128,
+    "peak_hour_events": 90,
+    "top_violation_labels": [
+      "NO PARKING",
+      "WRONG PARKING",
+      "PARKING IN A MAIN ROAD"
+    ],
+    "latest_event": "2024-04-08T08:28:46+00:00"
+  },
+  {
+    "station": "Peenya",
+    "record_count": 974,
+    "hotspot_count": 110,
+    "peak_hour_events": 152,
+    "top_violation_labels": [
+      "WRONG PARKING",
+      "NO PARKING",
+      "PARKING IN A MAIN ROAD"
+    ],
+    "latest_event": "2024-04-06T19:48:46+00:00"
+  },
+  {
+    "station": "Devanahalli Airport",
+    "record_count": 940,
+    "hotspot_count": 120,
+    "peak_hour_events": 112,
+    "top_violation_labels": [
+      "WRONG PARKING",
+      "NO PARKING",
+      "PARKING IN A MAIN ROAD"
+    ],
+    "latest_event": "2024-04-08T01:16:46+00:00"
+  },
+  {
+    "station": "Hennuru",
+    "record_count": 892,
+    "hotspot_count": 147,
+    "peak_hour_events": 206,
+    "top_violation_labels": [
+      "NO PARKING",
+      "WRONG PARKING",
+      "PARKING IN A MAIN ROAD"
+    ],
+    "latest_event": "2024-04-07T23:42:46+00:00"
+  },
+  {
+    "station": "K.G. Halli",
+    "record_count": 892,
+    "hotspot_count": 106,
+    "peak_hour_events": 61,
+    "top_violation_labels": [
+      "NO PARKING",
+      "WRONG PARKING",
+      "PARKING IN A MAIN ROAD"
+    ],
+    "latest_event": "2024-04-08T08:15:46+00:00"
+  },
+  {
+    "station": "Thalagattapura",
+    "record_count": 870,
+    "hotspot_count": 125,
+    "peak_hour_events": 46,
+    "top_violation_labels": [
+      "NO PARKING",
+      "WRONG PARKING",
+      "PARKING IN A MAIN ROAD"
+    ],
+    "latest_event": "2024-04-08T08:28:46+00:00"
+  },
+  {
+    "station": "K.S. Layout",
+    "record_count": 828,
+    "hotspot_count": 110,
+    "peak_hour_events": 85,
+    "top_violation_labels": [
+      "NO PARKING",
+      "WRONG PARKING",
+      "PARKING IN A MAIN ROAD"
+    ],
+    "latest_event": "2024-04-07T06:01:46+00:00"
+  },
+  {
+    "station": "Chikkabanavara",
+    "record_count": 785,
+    "hotspot_count": 92,
+    "peak_hour_events": 105,
+    "top_violation_labels": [
+      "WRONG PARKING",
+      "NO PARKING",
+      "PARKING IN A MAIN ROAD"
+    ],
+    "latest_event": "2024-04-08T07:59:46+00:00"
+  },
+  {
+    "station": "Kengeri",
+    "record_count": 464,
+    "hotspot_count": 79,
+    "peak_hour_events": 22,
+    "top_violation_labels": [
+      "NO PARKING",
+      "WRONG PARKING",
+      "PARKING IN A MAIN ROAD"
+    ],
+    "latest_event": "2024-04-06T00:12:46+00:00"
+  },
+  {
+    "station": "No Police Station",
+    "record_count": 339,
+    "hotspot_count": 85,
+    "peak_hour_events": 34,
+    "top_violation_labels": [
+      "WRONG PARKING",
+      "NO PARKING",
+      "PARKING IN A MAIN ROAD"
+    ],
+    "latest_event": "2024-04-04T07:51:46+00:00"
+  },
+  {
+    "station": "Unknown station",
+    "record_count": 5,
+    "hotspot_count": 3,
+    "peak_hour_events": 0,
+    "top_violation_labels": [
+      "WRONG PARKING",
+      "NO PARKING"
+    ],
+    "latest_event": "2024-03-20T03:30:24.526372+00:00"
+  }
+]

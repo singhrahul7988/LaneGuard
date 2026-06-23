@@ -1,0 +1,508 @@
+{
+  "generated_at": "2026-06-23T07:09:17.845452+00:00",
+  "selection_metric": "average_precision",
+  "calibration_method": "platt_logit_scaling",
+  "candidates": [
+    {
+      "family_key": "xgboost",
+      "family": "XGBoost",
+      "model_name": "xgboost_hotspot_classifier_v2",
+      "variant_label": "XGBoost grid 1",
+      "tuning_index": 1,
+      "params_override": {
+        "max_depth": 4,
+        "eta": 0.05,
+        "subsample": 0.85,
+        "colsample_bytree": 0.85,
+        "min_child_weight": 2.0
+      },
+      "chosen_threshold": 0.3,
+      "calibration": {
+        "method": "platt_logit_scaling",
+        "slope": 0.986731,
+        "intercept": -1.619584
+      },
+      "validation_raw_metrics": {
+        "average_precision": 0.654,
+        "precision_at_risk_55": 0.476,
+        "recall_at_risk_55": 0.6861,
+        "precision_at_selected_threshold": 0.476,
+        "recall_at_selected_threshold": 0.6861,
+        "f1_at_selected_threshold": 0.5621,
+        "precision_at_top_30": 1.0,
+        "recall_at_top_30": 0.0273,
+        "log_loss": 0.4462,
+        "brier_score": 0.1441,
+        "mae_next_shift_records": 0.817
+      },
+      "validation_calibrated_metrics": {
+        "average_precision": 0.654,
+        "precision_at_risk_55": 0.8468,
+        "recall_at_risk_55": 0.3521,
+        "precision_at_selected_threshold": 0.5996,
+        "recall_at_selected_threshold": 0.545,
+        "f1_at_selected_threshold": 0.571,
+        "precision_at_top_30": 1.0,
+        "recall_at_top_30": 0.0273,
+        "log_loss": 0.2969,
+        "brier_score": 0.0877,
+        "mae_next_shift_records": 0.817
+      },
+      "test_calibrated_metrics": {
+        "average_precision": 0.6899,
+        "precision_at_risk_55": 0.863,
+        "recall_at_risk_55": 0.3807,
+        "precision_at_selected_threshold": 0.6218,
+        "recall_at_selected_threshold": 0.5808,
+        "f1_at_selected_threshold": 0.6006,
+        "precision_at_top_30": 1.0,
+        "recall_at_top_30": 0.0235,
+        "log_loss": 0.2847,
+        "brier_score": 0.0842,
+        "mae_next_shift_records": 0.774
+      },
+      "validation_average_precision_gain": 0.0,
+      "validation_brier_gain": 0.0564
+    },
+    {
+      "family_key": "xgboost",
+      "family": "XGBoost",
+      "model_name": "xgboost_hotspot_classifier_v2",
+      "variant_label": "XGBoost grid 2",
+      "tuning_index": 2,
+      "params_override": {
+        "max_depth": 5,
+        "eta": 0.05,
+        "subsample": 0.9,
+        "colsample_bytree": 0.85,
+        "min_child_weight": 3.0
+      },
+      "chosen_threshold": 0.32,
+      "calibration": {
+        "method": "platt_logit_scaling",
+        "slope": 0.955641,
+        "intercept": -1.59847
+      },
+      "validation_raw_metrics": {
+        "average_precision": 0.6578,
+        "precision_at_risk_55": 0.494,
+        "recall_at_risk_55": 0.6724,
+        "precision_at_selected_threshold": 0.494,
+        "recall_at_selected_threshold": 0.6724,
+        "f1_at_selected_threshold": 0.5696,
+        "precision_at_top_30": 1.0,
+        "recall_at_top_30": 0.0273,
+        "log_loss": 0.4389,
+        "brier_score": 0.1409,
+        "mae_next_shift_records": 0.8137
+      },
+      "validation_calibrated_metrics": {
+        "average_precision": 0.6578,
+        "precision_at_risk_55": 0.8208,
+        "recall_at_risk_55": 0.3585,
+        "precision_at_selected_threshold": 0.6258,
+        "recall_at_selected_threshold": 0.5296,
+        "f1_at_selected_threshold": 0.5737,
+        "precision_at_top_30": 1.0,
+        "recall_at_top_30": 0.0273,
+        "log_loss": 0.2958,
+        "brier_score": 0.0872,
+        "mae_next_shift_records": 0.8137
+      },
+      "test_calibrated_metrics": {
+        "average_precision": 0.6902,
+        "precision_at_risk_55": 0.8714,
+        "recall_at_risk_55": 0.3776,
+        "precision_at_selected_threshold": 0.6516,
+        "recall_at_selected_threshold": 0.5534,
+        "f1_at_selected_threshold": 0.5985,
+        "precision_at_top_30": 1.0,
+        "recall_at_top_30": 0.0235,
+        "log_loss": 0.2846,
+        "brier_score": 0.0842,
+        "mae_next_shift_records": 0.7694
+      },
+      "validation_average_precision_gain": 0.0,
+      "validation_brier_gain": 0.0537
+    },
+    {
+      "family_key": "xgboost",
+      "family": "XGBoost",
+      "model_name": "xgboost_hotspot_classifier_v2",
+      "variant_label": "XGBoost grid 3",
+      "tuning_index": 3,
+      "params_override": {
+        "max_depth": 6,
+        "eta": 0.04,
+        "subsample": 0.85,
+        "colsample_bytree": 0.9,
+        "min_child_weight": 4.0
+      },
+      "chosen_threshold": 0.3,
+      "calibration": {
+        "method": "platt_logit_scaling",
+        "slope": 0.960745,
+        "intercept": -1.591979
+      },
+      "validation_raw_metrics": {
+        "average_precision": 0.6591,
+        "precision_at_risk_55": 0.4887,
+        "recall_at_risk_55": 0.6697,
+        "precision_at_selected_threshold": 0.4887,
+        "recall_at_selected_threshold": 0.6697,
+        "f1_at_selected_threshold": 0.5651,
+        "precision_at_top_30": 1.0,
+        "recall_at_top_30": 0.0273,
+        "log_loss": 0.4367,
+        "brier_score": 0.1402,
+        "mae_next_shift_records": 0.8087
+      },
+      "validation_calibrated_metrics": {
+        "average_precision": 0.6591,
+        "precision_at_risk_55": 0.8249,
+        "recall_at_risk_55": 0.3558,
+        "precision_at_selected_threshold": 0.6186,
+        "recall_at_selected_threshold": 0.546,
+        "f1_at_selected_threshold": 0.58,
+        "precision_at_top_30": 1.0,
+        "recall_at_top_30": 0.0273,
+        "log_loss": 0.2951,
+        "brier_score": 0.087,
+        "mae_next_shift_records": 0.8087
+      },
+      "test_calibrated_metrics": {
+        "average_precision": 0.6907,
+        "precision_at_risk_55": 0.8652,
+        "recall_at_risk_55": 0.383,
+        "precision_at_selected_threshold": 0.6304,
+        "recall_at_selected_threshold": 0.5769,
+        "f1_at_selected_threshold": 0.6025,
+        "precision_at_top_30": 1.0,
+        "recall_at_top_30": 0.0235,
+        "log_loss": 0.2843,
+        "brier_score": 0.0841,
+        "mae_next_shift_records": 0.7698
+      },
+      "validation_average_precision_gain": 0.0,
+      "validation_brier_gain": 0.0532
+    },
+    {
+      "family_key": "xgboost",
+      "family": "XGBoost",
+      "model_name": "xgboost_hotspot_classifier_v2",
+      "variant_label": "XGBoost grid 4",
+      "tuning_index": 4,
+      "params_override": {
+        "max_depth": 7,
+        "eta": 0.06,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "min_child_weight": 3.0
+      },
+      "chosen_threshold": 0.32,
+      "calibration": {
+        "method": "platt_logit_scaling",
+        "slope": 0.900205,
+        "intercept": -1.451355
+      },
+      "validation_raw_metrics": {
+        "average_precision": 0.659,
+        "precision_at_risk_55": 0.5226,
+        "recall_at_risk_55": 0.6424,
+        "precision_at_selected_threshold": 0.5226,
+        "recall_at_selected_threshold": 0.6424,
+        "f1_at_selected_threshold": 0.5763,
+        "precision_at_top_30": 1.0,
+        "recall_at_top_30": 0.0273,
+        "log_loss": 0.4066,
+        "brier_score": 0.1287,
+        "mae_next_shift_records": 0.8157
+      },
+      "validation_calibrated_metrics": {
+        "average_precision": 0.659,
+        "precision_at_risk_55": 0.8203,
+        "recall_at_risk_55": 0.353,
+        "precision_at_selected_threshold": 0.6337,
+        "recall_at_selected_threshold": 0.5369,
+        "f1_at_selected_threshold": 0.5813,
+        "precision_at_top_30": 1.0,
+        "recall_at_top_30": 0.0273,
+        "log_loss": 0.2952,
+        "brier_score": 0.087,
+        "mae_next_shift_records": 0.8157
+      },
+      "test_calibrated_metrics": {
+        "average_precision": 0.6899,
+        "precision_at_risk_55": 0.8604,
+        "recall_at_risk_55": 0.387,
+        "precision_at_selected_threshold": 0.6473,
+        "recall_at_selected_threshold": 0.5691,
+        "f1_at_selected_threshold": 0.6057,
+        "precision_at_top_30": 1.0,
+        "recall_at_top_30": 0.0235,
+        "log_loss": 0.2855,
+        "brier_score": 0.0843,
+        "mae_next_shift_records": 0.7618
+      },
+      "validation_average_precision_gain": 0.0,
+      "validation_brier_gain": 0.0417
+    },
+    {
+      "family_key": "lightgbm",
+      "family": "LightGBM",
+      "model_name": "lightgbm_hotspot_classifier_v2",
+      "variant_label": "LightGBM grid 1",
+      "tuning_index": 1,
+      "params_override": {
+        "learning_rate": 0.04,
+        "num_leaves": 31,
+        "feature_fraction": 0.82,
+        "bagging_fraction": 0.86,
+        "min_data_in_leaf": 16
+      },
+      "chosen_threshold": 0.3,
+      "calibration": {
+        "method": "platt_logit_scaling",
+        "slope": 0.947287,
+        "intercept": -1.566853
+      },
+      "validation_raw_metrics": {
+        "average_precision": 0.6582,
+        "precision_at_risk_55": 0.4856,
+        "recall_at_risk_55": 0.6742,
+        "precision_at_selected_threshold": 0.4856,
+        "recall_at_selected_threshold": 0.6742,
+        "f1_at_selected_threshold": 0.5646,
+        "precision_at_top_30": 1.0,
+        "recall_at_top_30": 0.0273,
+        "log_loss": 0.4309,
+        "brier_score": 0.1384,
+        "mae_next_shift_records": 0.8216
+      },
+      "validation_calibrated_metrics": {
+        "average_precision": 0.6582,
+        "precision_at_risk_55": 0.8256,
+        "recall_at_risk_55": 0.3576,
+        "precision_at_selected_threshold": 0.6072,
+        "recall_at_selected_threshold": 0.5541,
+        "f1_at_selected_threshold": 0.5794,
+        "precision_at_top_30": 1.0,
+        "recall_at_top_30": 0.0273,
+        "log_loss": 0.2951,
+        "brier_score": 0.0872,
+        "mae_next_shift_records": 0.8216
+      },
+      "test_calibrated_metrics": {
+        "average_precision": 0.6903,
+        "precision_at_risk_55": 0.87,
+        "recall_at_risk_55": 0.3783,
+        "precision_at_selected_threshold": 0.629,
+        "recall_at_selected_threshold": 0.5761,
+        "f1_at_selected_threshold": 0.6014,
+        "precision_at_top_30": 1.0,
+        "recall_at_top_30": 0.0235,
+        "log_loss": 0.2844,
+        "brier_score": 0.0842,
+        "mae_next_shift_records": 0.7713
+      },
+      "validation_average_precision_gain": 0.0,
+      "validation_brier_gain": 0.0512
+    },
+    {
+      "family_key": "lightgbm",
+      "family": "LightGBM",
+      "model_name": "lightgbm_hotspot_classifier_v2",
+      "variant_label": "LightGBM grid 2",
+      "tuning_index": 2,
+      "params_override": {
+        "learning_rate": 0.05,
+        "num_leaves": 48,
+        "feature_fraction": 0.86,
+        "bagging_fraction": 0.88,
+        "min_data_in_leaf": 24
+      },
+      "chosen_threshold": 0.31,
+      "calibration": {
+        "method": "platt_logit_scaling",
+        "slope": 0.898654,
+        "intercept": -1.481681
+      },
+      "validation_raw_metrics": {
+        "average_precision": 0.6566,
+        "precision_at_risk_55": 0.5082,
+        "recall_at_risk_55": 0.647,
+        "precision_at_selected_threshold": 0.5082,
+        "recall_at_selected_threshold": 0.647,
+        "f1_at_selected_threshold": 0.5693,
+        "precision_at_top_30": 1.0,
+        "recall_at_top_30": 0.0273,
+        "log_loss": 0.4131,
+        "brier_score": 0.1315,
+        "mae_next_shift_records": 0.8163
+      },
+      "validation_calibrated_metrics": {
+        "average_precision": 0.6566,
+        "precision_at_risk_55": 0.8288,
+        "recall_at_risk_55": 0.3567,
+        "precision_at_selected_threshold": 0.6261,
+        "recall_at_selected_threshold": 0.5423,
+        "f1_at_selected_threshold": 0.5812,
+        "precision_at_top_30": 1.0,
+        "recall_at_top_30": 0.0273,
+        "log_loss": 0.2958,
+        "brier_score": 0.0874,
+        "mae_next_shift_records": 0.8163
+      },
+      "test_calibrated_metrics": {
+        "average_precision": 0.6898,
+        "precision_at_risk_55": 0.8668,
+        "recall_at_risk_55": 0.383,
+        "precision_at_selected_threshold": 0.6291,
+        "recall_at_selected_threshold": 0.5777,
+        "f1_at_selected_threshold": 0.6023,
+        "precision_at_top_30": 1.0,
+        "recall_at_top_30": 0.0235,
+        "log_loss": 0.2844,
+        "brier_score": 0.0843,
+        "mae_next_shift_records": 0.7628
+      },
+      "validation_average_precision_gain": 0.0,
+      "validation_brier_gain": 0.0441
+    },
+    {
+      "family_key": "lightgbm",
+      "family": "LightGBM",
+      "model_name": "lightgbm_hotspot_classifier_v2",
+      "variant_label": "LightGBM grid 3",
+      "tuning_index": 3,
+      "params_override": {
+        "learning_rate": 0.06,
+        "num_leaves": 63,
+        "feature_fraction": 0.9,
+        "bagging_fraction": 0.88,
+        "min_data_in_leaf": 20
+      },
+      "chosen_threshold": 0.31,
+      "calibration": {
+        "method": "platt_logit_scaling",
+        "slope": 0.87124,
+        "intercept": -1.418177
+      },
+      "validation_raw_metrics": {
+        "average_precision": 0.6589,
+        "precision_at_risk_55": 0.5215,
+        "recall_at_risk_55": 0.6388,
+        "precision_at_selected_threshold": 0.5215,
+        "recall_at_selected_threshold": 0.6388,
+        "f1_at_selected_threshold": 0.5742,
+        "precision_at_top_30": 1.0,
+        "recall_at_top_30": 0.0273,
+        "log_loss": 0.3998,
+        "brier_score": 0.1269,
+        "mae_next_shift_records": 0.8186
+      },
+      "validation_calibrated_metrics": {
+        "average_precision": 0.6589,
+        "precision_at_risk_55": 0.8323,
+        "recall_at_risk_55": 0.3521,
+        "precision_at_selected_threshold": 0.6229,
+        "recall_at_selected_threshold": 0.5441,
+        "f1_at_selected_threshold": 0.5809,
+        "precision_at_top_30": 1.0,
+        "recall_at_top_30": 0.0273,
+        "log_loss": 0.2954,
+        "brier_score": 0.087,
+        "mae_next_shift_records": 0.8186
+      },
+      "test_calibrated_metrics": {
+        "average_precision": 0.6875,
+        "precision_at_risk_55": 0.8761,
+        "recall_at_risk_55": 0.3776,
+        "precision_at_selected_threshold": 0.6386,
+        "recall_at_selected_threshold": 0.5769,
+        "f1_at_selected_threshold": 0.6062,
+        "precision_at_top_30": 1.0,
+        "recall_at_top_30": 0.0235,
+        "log_loss": 0.2857,
+        "brier_score": 0.0847,
+        "mae_next_shift_records": 0.7607
+      },
+      "validation_average_precision_gain": 0.0,
+      "validation_brier_gain": 0.0399
+    },
+    {
+      "family_key": "lightgbm",
+      "family": "LightGBM",
+      "model_name": "lightgbm_hotspot_classifier_v2",
+      "variant_label": "LightGBM grid 4",
+      "tuning_index": 4,
+      "params_override": {
+        "learning_rate": 0.05,
+        "num_leaves": 56,
+        "feature_fraction": 0.84,
+        "bagging_fraction": 0.9,
+        "min_data_in_leaf": 32
+      },
+      "chosen_threshold": 0.32,
+      "calibration": {
+        "method": "platt_logit_scaling",
+        "slope": 0.885647,
+        "intercept": -1.466355
+      },
+      "validation_raw_metrics": {
+        "average_precision": 0.6578,
+        "precision_at_risk_55": 0.5139,
+        "recall_at_risk_55": 0.6397,
+        "precision_at_selected_threshold": 0.5139,
+        "recall_at_selected_threshold": 0.6397,
+        "f1_at_selected_threshold": 0.5699,
+        "precision_at_top_30": 1.0,
+        "recall_at_top_30": 0.0273,
+        "log_loss": 0.4098,
+        "brier_score": 0.1303,
+        "mae_next_shift_records": 0.816
+      },
+      "validation_calibrated_metrics": {
+        "average_precision": 0.6578,
+        "precision_at_risk_55": 0.8426,
+        "recall_at_risk_55": 0.3603,
+        "precision_at_selected_threshold": 0.6375,
+        "recall_at_selected_threshold": 0.5296,
+        "f1_at_selected_threshold": 0.5785,
+        "precision_at_top_30": 1.0,
+        "recall_at_top_30": 0.0273,
+        "log_loss": 0.2959,
+        "brier_score": 0.0872,
+        "mae_next_shift_records": 0.816
+      },
+      "test_calibrated_metrics": {
+        "average_precision": 0.6903,
+        "precision_at_risk_55": 0.8766,
+        "recall_at_risk_55": 0.3736,
+        "precision_at_selected_threshold": 0.6505,
+        "recall_at_selected_threshold": 0.5565,
+        "f1_at_selected_threshold": 0.5998,
+        "precision_at_top_30": 1.0,
+        "recall_at_top_30": 0.0235,
+        "log_loss": 0.2847,
+        "brier_score": 0.0843,
+        "mae_next_shift_records": 0.7601
+      },
+      "validation_average_precision_gain": 0.0,
+      "validation_brier_gain": 0.0431
+    }
+  ],
+  "champion": {
+    "model_name": "xgboost_hotspot_classifier_v2",
+    "variant_label": "XGBoost grid 3",
+    "params_override": {
+      "max_depth": 6,
+      "eta": 0.04,
+      "subsample": 0.85,
+      "colsample_bytree": 0.9,
+      "min_child_weight": 4.0
+    },
+    "chosen_threshold": 0.3,
+    "selection_reason": "Highest calibrated validation average precision with F1 and recall tie-breaks."
+  }
+}

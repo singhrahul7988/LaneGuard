@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Daily Brief - LaneGuard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#333539",
+                        "inverse-surface": "#e2e2e8",
+                        "surface-variant": "#333539",
+                        "surface": "#111317",
+                        "on-secondary": "#432c00",
+                        "tertiary-fixed-dim": "#ffb4aa",
+                        "on-tertiary": "#690003",
+                        "tertiary-fixed": "#ffdad5",
+                        "primary-container": "#2e5bff",
+                        "outline": "#8e90a2",
+                        "on-error-container": "#ffdad6",
+                        "on-primary": "#002388",
+                        "on-primary-container": "#efefff",
+                        "on-background": "#e2e2e8",
+                        "primary-fixed-dim": "#b8c3ff",
+                        "on-tertiary-fixed-variant": "#930005",
+                        "secondary-fixed-dim": "#ffba3f",
+                        "on-tertiary-container": "#ffece9",
+                        "on-error": "#690005",
+                        "primary-fixed": "#dde1ff",
+                        "tertiary": "#ffb4aa",
+                        "secondary": "#ffd79b",
+                        "outline-variant": "#434656",
+                        "surface-bright": "#37393e",
+                        "secondary-fixed": "#ffdeae",
+                        "secondary-container": "#ffb211",
+                        "on-surface-variant": "#c4c5d9",
+                        "background": "#111317",
+                        "on-primary-fixed": "#001356",
+                        "inverse-primary": "#124af0",
+                        "error-container": "#93000a",
+                        "on-surface": "#e2e2e8",
+                        "surface-container": "#1e2024",
+                        "error": "#ffb4ab",
+                        "surface-container-low": "#1a1c20",
+                        "on-secondary-container": "#6b4800",
+                        "on-secondary-fixed-variant": "#604100",
+                        "on-primary-fixed-variant": "#0035be",
+                        "surface-tint": "#b8c3ff",
+                        "surface-container-lowest": "#0c0e12",
+                        "surface-container-high": "#282a2e",
+                        "surface-dim": "#111317",
+                        "on-secondary-fixed": "#281800",
+                        "primary": "#b8c3ff",
+                        "on-tertiary-fixed": "#410001",
+                        "inverse-on-surface": "#2f3035",
+                        "tertiary-container": "#d71a18"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "4px",
+                        "panel-padding": "12px",
+                        "margin": "24px",
+                        "gutter": "16px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "display-kpi": ["Inter"],
+                        "body-md": ["Inter"],
+                        "mono-data": ["JetBrains Mono"],
+                        "headline-sm": ["Inter"],
+                        "body-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "headline-lg": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "display-kpi": ["48px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "mono-data": ["13px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+                        "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        };
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased overflow-hidden flex flex-col h-screen">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-surface border-b border-outline-variant dark:border-outline-variant flex justify-between items-center w-full px-margin h-16 z-50">
+<div class="flex items-center gap-gutter">
+<span class="font-headline-lg text-headline-lg font-black tracking-tight text-primary dark:text-primary uppercase">LaneGuard</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex gap-2">
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-highest transition-colors active:scale-95 duration-100 rounded">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-highest transition-colors active:scale-95 duration-100 rounded">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+</div>
+<button class="bg-error-container text-on-error-container font-label-caps text-label-caps px-4 py-2 rounded flex items-center gap-2 hover:bg-error transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="warning">warning</span>
+                Emergency Alert
+            </button>
+</div>
+</header>
+<div class="flex flex-1 overflow-hidden">
+<!-- SideNavBar -->
+<nav class="bg-surface-container dark:bg-surface-container border-r border-outline-variant dark:border-outline-variant w-[280px] hidden md:flex flex-col z-40 shrink-0">
+<div class="p-panel-padding border-b border-outline-variant mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-surface-container-highest flex items-center justify-center overflow-hidden border border-outline">
+<img class="object-cover w-full h-full" data-alt="A highly detailed portrait of a command center operator in high-tech tactical gear, focusing intensely on data screens. The lighting is cool and blue-tinted, reflecting off the dark visor, set against a stark, brutalist control room background. The mood is urgent and authoritative." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD02dSqlicHcjxuhTehFq3Yw9WAPU6S_1HOxGAEp6uMfhp3OIyPJ3ezZyTfaFU3PQlJBXE-eqzAxQgM_1wQ6g7VxSUeXYvFUzKHisfiMsTTlEsdMGS8uq3jcyarPcLY6O3TpAgrO9x2olpuxFeoPWGxDxXlSYg0ijGO1c1Mi-AZK4lGRkcPqHO58S9PWyhq_NMyx7TqFQzSjSuB-FFB5xg6uhrrw2EmKxirv1YniFFHC1rVxPqMgiOJG9h8XEPmVqZ8wVOrwdC0c-9z"/>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm font-bold text-on-surface">BTP HQ</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Sector 01</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-1 px-2">
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant dark:text-on-surface-variant hover:bg-surface-container-high dark:hover:bg-surface-container-high transition-all duration-150 ease-in-out rounded" href="#">
+<span class="material-symbols-outlined" data-icon="map">map</span>
+<span class="font-label-caps text-label-caps">Live Map</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant dark:text-on-surface-variant hover:bg-surface-container-high dark:hover:bg-surface-container-high transition-all duration-150 ease-in-out rounded" href="#">
+<span class="material-symbols-outlined" data-icon="security_update_warning">security_update_warning</span>
+<span class="font-label-caps text-label-caps">Interventions</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 bg-primary-container text-on-primary-container border-l-4 border-primary font-bold transition-all duration-150 ease-in-out rounded-r" href="#">
+<span class="material-symbols-outlined" data-icon="analytics" style="font-variation-settings: 'FILL' 1;">analytics</span>
+<span class="font-label-caps text-label-caps">Analytics</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant dark:text-on-surface-variant hover:bg-surface-container-high dark:hover:bg-surface-container-high transition-all duration-150 ease-in-out rounded" href="#">
+<span class="material-symbols-outlined" data-icon="hub">hub</span>
+<span class="font-label-caps text-label-caps">Stations</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-on-surface-variant dark:text-on-surface-variant hover:bg-surface-container-high dark:hover:bg-surface-container-high transition-all duration-150 ease-in-out rounded" href="#">
+<span class="material-symbols-outlined" data-icon="policy">policy</span>
+<span class="font-label-caps text-label-caps">Policy</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-1 overflow-y-auto bg-background p-margin grid grid-cols-12 gap-gutter content-start">
+<!-- Headline -->
+<div class="col-span-12 mb-2">
+<h1 class="font-headline-lg text-headline-lg uppercase text-on-surface">Daily Brief</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Today's Priority Parking Pressure</p>
+</div>
+<!-- KPI Dashboard Summary -->
+<div class="col-span-12 lg:col-span-8 grid grid-cols-3 gap-gutter">
+<!-- KPI Card 1 -->
+<div class="bg-surface border border-outline-variant p-panel-padding rounded border-t-2 border-t-error">
+<div class="font-label-caps text-label-caps text-on-surface-variant mb-2">Active Hotspots</div>
+<div class="font-display-kpi text-display-kpi text-error">24</div>
+<div class="font-mono-data text-mono-data text-on-surface-variant mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-error">trending_up</span> +12% from yesterday
+                    </div>
+</div>
+<!-- KPI Card 2 -->
+<div class="bg-surface border border-outline-variant p-panel-padding rounded border-t-2 border-t-secondary">
+<div class="font-label-caps text-label-caps text-on-surface-variant mb-2">Affected Stations</div>
+<div class="font-display-kpi text-display-kpi text-secondary">08</div>
+<div class="font-mono-data text-mono-data text-on-surface-variant mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-secondary">equal</span> No change
+                    </div>
+</div>
+<!-- KPI Card 3 -->
+<div class="bg-surface border border-outline-variant p-panel-padding rounded border-t-2 border-t-primary">
+<div class="font-label-caps text-label-caps text-on-surface-variant mb-2">Peak Pressure Window</div>
+<div class="font-display-kpi text-display-kpi text-primary">17:00</div>
+<div class="font-mono-data text-mono-data text-on-surface-variant mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary">schedule</span> EST. DURATION 3H
+                    </div>
+</div>
+</div>
+<!-- Right Sidebar: Projected Relief -->
+<div class="col-span-12 lg:col-span-4 bg-surface-container border border-outline-variant p-panel-padding rounded flex flex-col">
+<div class="font-headline-sm text-headline-sm text-on-surface mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="timeline">timeline</span>
+                    Projected Relief Forecast
+                </div>
+<div class="flex-1 space-y-4">
+<div>
+<div class="flex justify-between font-mono-data text-mono-data mb-1">
+<span class="text-on-surface-variant">CBD Sector Relief</span>
+<span class="text-primary">+45%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded overflow-hidden">
+<div class="bg-primary h-full w-[45%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-mono-data text-mono-data mb-1">
+<span class="text-on-surface-variant">Tech Park Congestion Drop</span>
+<span class="text-secondary">+28%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded overflow-hidden">
+<div class="bg-secondary h-full w-[28%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-mono-data text-mono-data mb-1">
+<span class="text-on-surface-variant">Transit Hub Clearance</span>
+<span class="text-error">+12%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded overflow-hidden">
+<div class="bg-error h-full w-[12%]"></div>
+</div>
+</div>
+</div>
+<div class="mt-4 p-2 bg-surface-container-highest border border-outline-variant rounded font-body-sm text-body-sm text-on-surface-variant">
+<strong class="text-on-surface">SYS NOTE:</strong> Relief projections based on implementation of immediate interventions.
+                </div>
+</div>
+<!-- Map and Top Interventions Row -->
+<div class="col-span-12 grid grid-cols-12 gap-gutter mt-4">
+<!-- Priority Corridors Map -->
+<div class="col-span-12 lg:col-span-7 bg-surface border border-outline-variant rounded p-panel-padding flex flex-col min-h-[400px]">
+<div class="font-headline-sm text-headline-sm text-on-surface mb-3 flex items-center justify-between">
+<span>Priority Corridors Map</span>
+<div class="flex gap-2">
+<span class="px-2 py-1 bg-error-container text-on-error-container font-label-caps text-label-caps rounded">CRITICAL</span>
+<span class="px-2 py-1 bg-secondary-container text-on-secondary-container font-label-caps text-label-caps rounded">MONITOR</span>
+</div>
+</div>
+<div class="flex-1 relative rounded border border-outline-variant overflow-hidden bg-surface-container-lowest">
+<div class="bg-cover bg-center w-full h-full opacity-80" data-alt="A stark, high-contrast digital map interface showing a complex city grid in dark mode. The aesthetic is purely functional and brutalist, resembling a military or advanced infrastructure control screen. Rivers and parks are muted dark grey, while major arterial roads glow with intense neon red and amber lines indicating severe traffic pressure. The lighting is flat and data-driven." data-location="Bengaluru" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB9dYnHY4lGpz1oCNwNRFdhlv7k6J-7uLDqM2G8r4VrWh44HJeXc0z4eXWUigjnDV0SOMTdvyzXcndZwMUv3hs7B52JJkbtowxScSMOIBBPSGaoKC9Xw3u9rLJrySbe_Q4Xi7Gpl5_UXsT8ZYQ4RXoIoJiH3cne9Bhm73ev9VBGdNhJkxIWWJxImSGqLDvrz9xaGWFaZgcHMxQ_B7TZZj-ENTyN1oKtFIZQjZUfGpbG08NxTU1UWX2PkP5notEgwalKjQUbhn5PVlDN')"></div>
+<!-- Map Overlay Tooltip Example -->
+<div class="absolute top-1/4 left-1/3 bg-surface/90 border border-primary p-2 rounded backdrop-blur-sm max-w-[200px] shadow-lg">
+<div class="font-label-caps text-label-caps text-primary mb-1">Sector 4A - Arterial</div>
+<div class="font-mono-data text-mono-data text-on-surface">Pressure: 94%</div>
+<div class="w-2 h-2 bg-error rounded-full mt-1 animate-pulse"></div>
+</div>
+</div>
+</div>
+<!-- Top 5 Interventions -->
+<div class="col-span-12 lg:col-span-5 flex flex-col gap-unit">
+<div class="font-headline-sm text-headline-sm text-on-surface mb-2">Top Interventions Required</div>
+<!-- Intervention Cards -->
+<div class="bg-surface border border-outline-variant p-panel-padding rounded flex items-center gap-4 hover:bg-surface-container-high transition-colors cursor-pointer group">
+<div class="font-display-kpi text-[32px] font-bold text-outline-variant group-hover:text-primary transition-colors">01</div>
+<div class="flex-1">
+<div class="font-label-caps text-label-caps text-on-surface mb-1">M.G. Road Junction</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Deploy heavy-duty towing units. Clear illegal parking lane.</div>
+</div>
+<div class="px-2 py-1 bg-error font-label-caps text-label-caps text-on-error rounded shrink-0">SEV 1</div>
+</div>
+<div class="bg-surface border border-outline-variant p-panel-padding rounded flex items-center gap-4 hover:bg-surface-container-high transition-colors cursor-pointer group">
+<div class="font-display-kpi text-[32px] font-bold text-outline-variant group-hover:text-primary transition-colors">02</div>
+<div class="flex-1">
+<div class="font-label-caps text-label-caps text-on-surface mb-1">Indiranagar 100ft Road</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Reroute commercial traffic. Enforce no-parking zone.</div>
+</div>
+<div class="px-2 py-1 bg-error-container text-on-error-container font-label-caps text-label-caps rounded shrink-0">SEV 1</div>
+</div>
+<div class="bg-surface border border-outline-variant p-panel-padding rounded flex items-center gap-4 hover:bg-surface-container-high transition-colors cursor-pointer group">
+<div class="font-display-kpi text-[32px] font-bold text-outline-variant group-hover:text-primary transition-colors">03</div>
+<div class="flex-1">
+<div class="font-label-caps text-label-caps text-on-surface mb-1">Koramangala 80ft Road</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Increase patrol frequency. Disperse localized congestion.</div>
+</div>
+<div class="px-2 py-1 bg-secondary font-label-caps text-label-caps text-on-secondary rounded shrink-0">SEV 2</div>
+</div>
+<div class="bg-surface border border-outline-variant p-panel-padding rounded flex items-center gap-4 hover:bg-surface-container-high transition-colors cursor-pointer group">
+<div class="font-display-kpi text-[32px] font-bold text-outline-variant group-hover:text-primary transition-colors">04</div>
+<div class="flex-1">
+<div class="font-label-caps text-label-caps text-on-surface mb-1">Outer Ring Road (Bellandur)</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Signal synchronization adjustment. Manage tech-park exit flow.</div>
+</div>
+<div class="px-2 py-1 bg-secondary-container text-on-secondary-container font-label-caps text-label-caps rounded shrink-0">SEV 2</div>
+</div>
+</div>
+</div>
+<!-- Strategic Policy Summary -->
+<div class="col-span-12 mt-4 bg-surface-container border border-outline-variant p-panel-padding rounded">
+<div class="font-headline-sm text-headline-sm text-on-surface mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="policy">policy</span>
+                    Strategic Policy Summary
+                </div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<div class="p-3 border border-outline-variant bg-surface rounded">
+<div class="font-label-caps text-label-caps text-primary mb-2">Directive Alpha</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Prioritize arterial corridor clearing before 16:00. Zero tolerance for commercial unloading in Sector 1 &amp; 2 during peak hours.</p>
+</div>
+<div class="p-3 border border-outline-variant bg-surface rounded">
+<div class="font-label-caps text-label-caps text-primary mb-2">Resource Allocation</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Shift 30% of rapid response units from Northern sector to CBD hotspots immediately. Maintain reserve capacity for transit hubs.</p>
+</div>
+<div class="p-3 border border-outline-variant bg-surface rounded">
+<div class="font-label-caps text-label-caps text-primary mb-2">Public Comms</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Issue standard delays warning for Eastern tech corridor. Advise alternate routes via variable message signs.</p>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-surface-container-low border-t border-outline-variant dark:border-outline-variant w-full flex justify-between items-center px-margin h-8 z-50 shrink-0">
+<div class="font-label-caps text-label-caps text-on-surface">SYSTEM STATUS: ONLINE / SYNCED</div>
+<div class="flex gap-4">
+<span class="font-mono-data text-mono-data text-on-surface-variant hover:text-primary transition-colors cursor-pointer">Severity: Low</span>
+<span class="font-mono-data text-mono-data text-on-surface-variant hover:text-primary transition-colors cursor-pointer">Severity: Medium</span>
+<span class="font-mono-data text-mono-data text-on-surface-variant hover:text-primary transition-colors cursor-pointer">Severity: High</span>
+</div>
+</footer>
+</body></html>

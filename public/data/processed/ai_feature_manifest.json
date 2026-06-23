@@ -1,0 +1,30 @@
+{
+  "purpose": "Model-ready baseline for next-shift parking-pressure prediction and later optimization work.",
+  "row_definition": "One observed hotspot-cluster shift window with lag features and the next-shift target.",
+  "features": [
+    "current_shift_records",
+    "current_shift_peak_events",
+    "previous_shift_records",
+    "rolling_3_shift_records",
+    "rolling_9_shift_records",
+    "same_shift_records_7d",
+    "active_days_14d",
+    "station_current_shift_records",
+    "station_recent_3_shift_records",
+    "station_same_shift_records_7d",
+    "hotspot_record_count",
+    "hotspot_repeat_days",
+    "hotspot_peak_hour_events",
+    "hotspot_priority_score",
+    "hotspot_impact_proxy_score",
+    "severity_band",
+    "junction_risk",
+    "main_road_flag",
+    "staleness_slots_since_active"
+  ],
+  "targets": [
+    "target_next_shift_records",
+    "target_next_shift_peak_events",
+    "target_next_shift_hotspot"
+  ]
+}

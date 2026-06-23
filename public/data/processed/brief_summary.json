@@ -1,0 +1,488 @@
+{
+  "headline": "Today's Priority Parking Pressure",
+  "total_parking_records": 298450,
+  "total_hotspots": 7816,
+  "top_station": "Upparpet",
+  "peak_hour": 5,
+  "top_hotspots": [
+    {
+      "cluster_id": "12.964:77.577",
+      "latitude": 12.964078,
+      "longitude": 77.576899,
+      "location": "KR Main Road, City Market Circle, Bengaluru, Karnataka. Pin-560002 (India)",
+      "police_station": "City Market",
+      "record_count": 3743,
+      "repeat_days": 151,
+      "peak_hour_events": 1892,
+      "top_violation_labels": [
+        "WRONG PARKING",
+        "NO PARKING",
+        "PARKING IN A MAIN ROAD"
+      ],
+      "severity_mix": 7,
+      "junction_risk": true,
+      "main_road_flag": true,
+      "latest_event": "2024-04-08T16:24:46+00:00",
+      "recency_weight": 14,
+      "records": [
+        "FKID000180",
+        "FKID000185",
+        "FKID000188",
+        "FKID000204",
+        "FKID000300",
+        "FKID000309",
+        "FKID000311",
+        "FKID000387",
+        "FKID000389",
+        "FKID000390",
+        "FKID000391",
+        "FKID000640",
+        "FKID000677",
+        "FKID000684",
+        "FKID000826",
+        "FKID000829",
+        "FKID001190",
+        "FKID001727",
+        "FKID001751",
+        "FKID001760",
+        "FKID001774",
+        "FKID001778",
+        "FKID001779",
+        "FKID001780",
+        "FKID001781"
+      ],
+      "priority_score": 92.5,
+      "impact_proxy_score": 98.7,
+      "severity_band": "critical",
+      "reason_chips": [
+        "Recurring 151 days",
+        "Peak-hour dense",
+        "Main-road parking",
+        "Crossing / junction risk"
+      ],
+      "recommendations": {
+        "immediate": [
+          "Deploy tow-priority enforcement in the next shift",
+          "Schedule focused peak-hour patrol presence",
+          "Treat as a zero-tolerance main-road obstruction zone"
+        ],
+        "short_term": [
+          "Evaluate no-parking buffer and signage reinforcement near the junction",
+          "Review timed restriction enforcement for repeat periods"
+        ],
+        "medium_term": [
+          "Study nearby managed short-stay parking options",
+          "Review curb-management policy for this corridor"
+        ]
+      }
+    },
+    {
+      "cluster_id": "12.981:77.610",
+      "latitude": 12.981084,
+      "longitude": 77.610135,
+      "location": "Kamaraj Road, Sri Nagamma Devi Circle, Sivanchetti Gardens, Bengaluru, Karnataka. Pin-560042 (India)",
+      "police_station": "Shivajinagar",
+      "record_count": 4405,
+      "repeat_days": 149,
+      "peak_hour_events": 374,
+      "top_violation_labels": [
+        "WRONG PARKING",
+        "NO PARKING",
+        "DOUBLE PARKING"
+      ],
+      "severity_mix": 5,
+      "junction_risk": true,
+      "main_road_flag": true,
+      "latest_event": "2024-04-08T06:10:46+00:00",
+      "recency_weight": 14,
+      "records": [
+        "FKID000287",
+        "FKID000303",
+        "FKID000457",
+        "FKID000732",
+        "FKID000833",
+        "FKID000842",
+        "FKID000906",
+        "FKID001495",
+        "FKID001500",
+        "FKID001502",
+        "FKID001622",
+        "FKID001888",
+        "FKID002311",
+        "FKID002482",
+        "FKID002483",
+        "FKID002484",
+        "FKID002485",
+        "FKID002973",
+        "FKID003189",
+        "FKID003218",
+        "FKID003424",
+        "FKID003425",
+        "FKID003427",
+        "FKID003428",
+        "FKID003430"
+      ],
+      "priority_score": 87.3,
+      "impact_proxy_score": 91.7,
+      "severity_band": "critical",
+      "reason_chips": [
+        "Recurring 149 days",
+        "Main-road parking",
+        "Crossing / junction risk"
+      ],
+      "recommendations": {
+        "immediate": [
+          "Deploy tow-priority enforcement in the next shift"
+        ],
+        "short_term": [
+          "Evaluate no-parking buffer and signage reinforcement near the junction",
+          "Review timed restriction enforcement for repeat periods",
+          "Target curbside loading behavior with stricter monitoring"
+        ],
+        "medium_term": [
+          "Study nearby managed short-stay parking options",
+          "Review curb-management policy for this corridor"
+        ]
+      }
+    },
+    {
+      "cluster_id": "12.977:77.576",
+      "latitude": 12.977187,
+      "longitude": 77.576132,
+      "location": "6th Main Road, RK Puram, Gandhi Nagar, Bengaluru, Karnataka. Pin-560009 (India)",
+      "police_station": "Upparpet",
+      "record_count": 3182,
+      "repeat_days": 144,
+      "peak_hour_events": 268,
+      "top_violation_labels": [
+        "NO PARKING",
+        "WRONG PARKING",
+        "PARKING IN A MAIN ROAD"
+      ],
+      "severity_mix": 7,
+      "junction_risk": true,
+      "main_road_flag": true,
+      "latest_event": "2024-04-08T04:50:46+00:00",
+      "recency_weight": 14,
+      "records": [
+        "FKID000285",
+        "FKID000751",
+        "FKID000754",
+        "FKID000755",
+        "FKID000785",
+        "FKID001099",
+        "FKID001108",
+        "FKID001307",
+        "FKID002006",
+        "FKID002007",
+        "FKID002280",
+        "FKID002359",
+        "FKID002475",
+        "FKID003241",
+        "FKID003261",
+        "FKID003303",
+        "FKID003310",
+        "FKID003338",
+        "FKID003354",
+        "FKID003359",
+        "FKID003363",
+        "FKID003385",
+        "FKID003721",
+        "FKID003814",
+        "FKID003948"
+      ],
+      "priority_score": 78.5,
+      "impact_proxy_score": 84.8,
+      "severity_band": "high",
+      "reason_chips": [
+        "Recurring 144 days",
+        "Main-road parking",
+        "Crossing / junction risk"
+      ],
+      "recommendations": {
+        "immediate": [
+          "Treat as a zero-tolerance main-road obstruction zone"
+        ],
+        "short_term": [
+          "Evaluate no-parking buffer and signage reinforcement near the junction",
+          "Review timed restriction enforcement for repeat periods"
+        ],
+        "medium_term": [
+          "Study nearby managed short-stay parking options",
+          "Review curb-management policy for this corridor"
+        ]
+      }
+    },
+    {
+      "cluster_id": "12.934:77.691",
+      "latitude": 12.933868,
+      "longitude": 77.690868,
+      "location": "New Horizon College Road, New Horizon College of Engineering, Kadubisanahalli, Bengaluru, Karnataka. Pin-560103 (India)",
+      "police_station": "HAL Old Airport",
+      "record_count": 3343,
+      "repeat_days": 93,
+      "peak_hour_events": 155,
+      "top_violation_labels": [
+        "NO PARKING",
+        "WRONG PARKING",
+        "PARKING IN A MAIN ROAD"
+      ],
+      "severity_mix": 7,
+      "junction_risk": true,
+      "main_road_flag": true,
+      "latest_event": "2024-04-06T05:13:46+00:00",
+      "recency_weight": 12,
+      "records": [
+        "FKID000515",
+        "FKID000616",
+        "FKID000915",
+        "FKID000921",
+        "FKID000928",
+        "FKID000929",
+        "FKID000930",
+        "FKID000935",
+        "FKID000940",
+        "FKID000945",
+        "FKID000954",
+        "FKID000961",
+        "FKID000969",
+        "FKID000972",
+        "FKID000974",
+        "FKID000987",
+        "FKID000997",
+        "FKID001013",
+        "FKID001029",
+        "FKID001038",
+        "FKID001040",
+        "FKID001042",
+        "FKID001044",
+        "FKID001045",
+        "FKID001055"
+      ],
+      "priority_score": 70.3,
+      "impact_proxy_score": 76.6,
+      "severity_band": "high",
+      "reason_chips": [
+        "Recurring 93 days",
+        "Main-road parking",
+        "Crossing / junction risk"
+      ],
+      "recommendations": {
+        "immediate": [
+          "Treat as a zero-tolerance main-road obstruction zone"
+        ],
+        "short_term": [
+          "Evaluate no-parking buffer and signage reinforcement near the junction",
+          "Review timed restriction enforcement for repeat periods"
+        ],
+        "medium_term": [
+          "Study nearby managed short-stay parking options",
+          "Review curb-management policy for this corridor"
+        ]
+      }
+    },
+    {
+      "cluster_id": "13.184:77.680",
+      "latitude": 13.184071,
+      "longitude": 77.679713,
+      "location": "Unnamed Road, Begur Chikkanahalli, Bengaluru, Karnataka. Pin-562149 (India)",
+      "police_station": "Chikkajala",
+      "record_count": 1926,
+      "repeat_days": 139,
+      "peak_hour_events": 700,
+      "top_violation_labels": [
+        "NO PARKING",
+        "PARKING IN A MAIN ROAD",
+        "WRONG PARKING"
+      ],
+      "severity_mix": 7,
+      "junction_risk": true,
+      "main_road_flag": true,
+      "latest_event": "2024-04-08T09:20:46+00:00",
+      "recency_weight": 14,
+      "records": [
+        "FKID000090",
+        "FKID000276",
+        "FKID001221",
+        "FKID001312",
+        "FKID001314",
+        "FKID001317",
+        "FKID001319",
+        "FKID001840",
+        "FKID001841",
+        "FKID001842",
+        "FKID001843",
+        "FKID001845",
+        "FKID001846",
+        "FKID001848",
+        "FKID001906",
+        "FKID001909",
+        "FKID002227",
+        "FKID002935",
+        "FKID003850",
+        "FKID004155",
+        "FKID004159",
+        "FKID004162",
+        "FKID004321",
+        "FKID004514",
+        "FKID004516"
+      ],
+      "priority_score": 70.2,
+      "impact_proxy_score": 76.4,
+      "severity_band": "high",
+      "reason_chips": [
+        "Recurring 139 days",
+        "Peak-hour dense",
+        "Main-road parking",
+        "Crossing / junction risk"
+      ],
+      "recommendations": {
+        "immediate": [
+          "Schedule focused peak-hour patrol presence",
+          "Treat as a zero-tolerance main-road obstruction zone"
+        ],
+        "short_term": [
+          "Evaluate no-parking buffer and signage reinforcement near the junction",
+          "Review timed restriction enforcement for repeat periods"
+        ],
+        "medium_term": [
+          "Study nearby managed short-stay parking options",
+          "Review curb-management policy for this corridor"
+        ]
+      }
+    }
+  ],
+  "top_policy_recommendations": [
+    {
+      "cluster_id": "12.964:77.577",
+      "location": "KR Main Road, City Market Circle, Bengaluru, Karnataka. Pin-560002 (India)",
+      "station": "City Market",
+      "priority_score": 92.5,
+      "impact_proxy_score": 98.7,
+      "reason_chips": [
+        "Recurring 151 days",
+        "Peak-hour dense",
+        "Main-road parking",
+        "Crossing / junction risk"
+      ],
+      "recommendations": {
+        "immediate": [
+          "Deploy tow-priority enforcement in the next shift",
+          "Schedule focused peak-hour patrol presence",
+          "Treat as a zero-tolerance main-road obstruction zone"
+        ],
+        "short_term": [
+          "Evaluate no-parking buffer and signage reinforcement near the junction",
+          "Review timed restriction enforcement for repeat periods"
+        ],
+        "medium_term": [
+          "Study nearby managed short-stay parking options",
+          "Review curb-management policy for this corridor"
+        ]
+      }
+    },
+    {
+      "cluster_id": "12.981:77.610",
+      "location": "Kamaraj Road, Sri Nagamma Devi Circle, Sivanchetti Gardens, Bengaluru, Karnataka. Pin-560042 (India)",
+      "station": "Shivajinagar",
+      "priority_score": 87.3,
+      "impact_proxy_score": 91.7,
+      "reason_chips": [
+        "Recurring 149 days",
+        "Main-road parking",
+        "Crossing / junction risk"
+      ],
+      "recommendations": {
+        "immediate": [
+          "Deploy tow-priority enforcement in the next shift"
+        ],
+        "short_term": [
+          "Evaluate no-parking buffer and signage reinforcement near the junction",
+          "Review timed restriction enforcement for repeat periods",
+          "Target curbside loading behavior with stricter monitoring"
+        ],
+        "medium_term": [
+          "Study nearby managed short-stay parking options",
+          "Review curb-management policy for this corridor"
+        ]
+      }
+    },
+    {
+      "cluster_id": "12.977:77.576",
+      "location": "6th Main Road, RK Puram, Gandhi Nagar, Bengaluru, Karnataka. Pin-560009 (India)",
+      "station": "Upparpet",
+      "priority_score": 78.5,
+      "impact_proxy_score": 84.8,
+      "reason_chips": [
+        "Recurring 144 days",
+        "Main-road parking",
+        "Crossing / junction risk"
+      ],
+      "recommendations": {
+        "immediate": [
+          "Treat as a zero-tolerance main-road obstruction zone"
+        ],
+        "short_term": [
+          "Evaluate no-parking buffer and signage reinforcement near the junction",
+          "Review timed restriction enforcement for repeat periods"
+        ],
+        "medium_term": [
+          "Study nearby managed short-stay parking options",
+          "Review curb-management policy for this corridor"
+        ]
+      }
+    },
+    {
+      "cluster_id": "12.934:77.691",
+      "location": "New Horizon College Road, New Horizon College of Engineering, Kadubisanahalli, Bengaluru, Karnataka. Pin-560103 (India)",
+      "station": "HAL Old Airport",
+      "priority_score": 70.3,
+      "impact_proxy_score": 76.6,
+      "reason_chips": [
+        "Recurring 93 days",
+        "Main-road parking",
+        "Crossing / junction risk"
+      ],
+      "recommendations": {
+        "immediate": [
+          "Treat as a zero-tolerance main-road obstruction zone"
+        ],
+        "short_term": [
+          "Evaluate no-parking buffer and signage reinforcement near the junction",
+          "Review timed restriction enforcement for repeat periods"
+        ],
+        "medium_term": [
+          "Study nearby managed short-stay parking options",
+          "Review curb-management policy for this corridor"
+        ]
+      }
+    },
+    {
+      "cluster_id": "13.184:77.680",
+      "location": "Unnamed Road, Begur Chikkanahalli, Bengaluru, Karnataka. Pin-562149 (India)",
+      "station": "Chikkajala",
+      "priority_score": 70.2,
+      "impact_proxy_score": 76.4,
+      "reason_chips": [
+        "Recurring 139 days",
+        "Peak-hour dense",
+        "Main-road parking",
+        "Crossing / junction risk"
+      ],
+      "recommendations": {
+        "immediate": [
+          "Schedule focused peak-hour patrol presence",
+          "Treat as a zero-tolerance main-road obstruction zone"
+        ],
+        "short_term": [
+          "Evaluate no-parking buffer and signage reinforcement near the junction",
+          "Review timed restriction enforcement for repeat periods"
+        ],
+        "medium_term": [
+          "Study nearby managed short-stay parking options",
+          "Review curb-management policy for this corridor"
+        ]
+      }
+    }
+  ]
+}
